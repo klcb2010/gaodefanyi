@@ -32,7 +32,7 @@ jobs:
           mapfile -t files < <(find . -type f \
             \( -name "*zh-rHK*.xml" -o -name "*zh-rTW*.xml" \
             -o -name "*zh-rHK*.txt" -o -name "*zh-rTW*.txt" \) \
-            ! -name "*_sc.*" -not -path "*/.git/*" 2>/dev/null || true)
+            ! -name "*.sc" -not -path "*/.git/*" 2>/dev/null || true)
 
           if [ ${#files[@]} -eq 0 ]; then
             echo "未找到任何符合条件的繁体文件"
@@ -45,7 +45,7 @@ jobs:
             echo "files_found=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: 提交生成的 _sc 文件（每次都提交 + 强制 add + debug）
+      - name: 提交生成的 .sc 文件（每次都提交 + 强制 add + debug）
         if: steps.find-files.outputs.files_found == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
@@ -54,20 +54,20 @@ jobs:
           echo "=== 当前目录结构 ==="
           ls -la
 
-          echo "=== 列出所有生成的 _sc 文件 ==="
-          find . -type f -name "*_sc.*" -print || echo "没有找到任何 _sc 文件！"
+          echo "=== 列出所有生成的 .sc 文件 ==="
+          find . -type f -name "*.sc" -print || echo "没有找到任何 .sc 文件！"
 
           echo "=== git status 前 ==="
           git status
 
-          # 明確逐個強制 add 找到的 _sc 文件
-          mapfile -t sc_files < <(find . -type f -name "*_sc.*" -print 2>/dev/null || true)
+          # 明確逐個強制 add 找到的 .sc 文件
+          mapfile -t sc_files < <(find . -type f -name "*.sc" -print 2>/dev/null || true)
           if [ ${#sc_files[@]} -gt 0 ]; then
             for file in "${sc_files[@]}"; do
               git add -f "$file" && echo "已成功 add: $file"
             done
           else
-            echo "警告：沒有找到任何 _sc 文件，無法 add"
+            echo "警告：沒有找到任何 .sc 文件，無法 add"
           fi
 
           echo "=== git status 后 add ==="
@@ -91,5 +91,5 @@ jobs:
         with:
           name: simplified-strings
           path: |
-            **/*_sc.*
+            **/*.sc
           if-no-files-found: warn
