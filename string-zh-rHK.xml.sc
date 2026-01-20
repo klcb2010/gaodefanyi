@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8' ?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add_favorites_failed">收藏失败</string>
     <string name="add_favorites_success">已收藏</string>
