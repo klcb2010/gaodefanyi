@@ -38,31 +38,47 @@ jobs:
             echo "未找到任何符合条件的繁体文件"
             echo "files_found=false" >> $GITHUB_OUTPUT
           else
-            echo "找到 ${#files[@]} 个文件，开始转换..."
+            echo "找到 ${#files[@]} 个文件："
+            printf '%s\n' "${files[@]}"
             python converter.py "${files[@]}"
             echo "files_found=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: 提交生成的 _sc 文件（每次都提交，即使無變化）
+      - name: 提交生成的 _sc 文件（每次都提交 + debug）
         if: steps.find-files.outputs.files_found == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          # 添加所有 _sc 檔案（保持原目錄結構）
+          echo "=== 当前目录结构 ==="
+          ls -la
+
+          echo "=== 列出所有生成的 _sc 文件 ==="
+          find . -type f -name "*_sc.*" -print || echo "没有找到任何 _sc 文件！"
+
+          echo "=== git status 前 ==="
+          git status
+
+          # 添加所有 _sc 文件
           git add **/*_sc.* 2>/dev/null || true
           git add ./**/*_sc.* 2>/dev/null || true
 
-          # 強制 commit（即使沒有變化也提交）
+          echo "=== git status 后 add ==="
+          git status
+
+          # 强制 commit（即使空）
           git commit --allow-empty -m "chore: 繁体 → 简体转换执行 ($(date '+%Y-%m-%d %H:%M:%S')) [ci skip]"
 
-          # 推送（使用當前分支）
+          echo "=== 最新 commit 详情 ==="
+          git log -1 --stat
+
+          # 推送
           git push origin HEAD:${{ github.ref_name }}
-          echo "已推送生成的 _sc 文件到倉庫"
+          echo "推送完成"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 上传转换结果作为 Artifact（方便檢查）
+      - name: 上传转换结果作为 Artifact（备用）
         if: always()
         uses: actions/upload-artifact@v4
         with:
