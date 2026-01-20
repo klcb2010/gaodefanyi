@@ -1,121 +1,120 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
-繁体中文转简体中文转换工具
-支持 .txt 和 .pdf 文件的单个/批量转换。
-用法: python converter.py [input_file_or_dir] [output_file_or_dir]
-- 如果输入/输出都是文件：转换单个文件。
-- 如果输入/输出有目录：批量转换到输出目录。
+Android strings.txt 繁体 → 简体 转换工具
+专门处理 string-zh-rHK.txt / string-zh-rTW.txt 这类文件
+输出到同目录，文件名自动加 _sc 后缀，例如：
+string-zh-rHK.txt → string-zh-rHK_sc.txt
 """
 
 from opencc import OpenCC
 import sys
-import os
-import argparse
+import re
 from pathlib import Path
 
-# 可选：PDF 处理
-try:
-    import pdfplumber
-    PDF_SUPPORT = True
-except ImportError:
-    PDF_SUPPORT = False
-    print("警告：未安装 pdfplumber，无法处理 PDF 文件。运行 'pip install pdfplumber' 安装。")
 
-def convert_text(content):
-    """转换文本为简体中文"""
-    converter = OpenCC('t2s')  # t2s: 繁体转简体
+def convert_text(content: str) -> str:
+    """繁体中文 → 简体中文"""
+    converter = OpenCC('t2s')
     return converter.convert(content)
 
-def convert_txt_file(input_path, output_path):
-    """转换 .txt 文件"""
+
+def should_skip_line(line: str) -> bool:
+    """判断是否为注释、空行或不需要转换的行"""
+    stripped = line.strip()
+    if not stripped:
+        return True
+    if stripped.startswith('<!--') and stripped.endswith('-->'):
+        return True
+    # Android 常见的 <xliff:g> 标记内容通常不翻译
+    if '<xliff:g' in line and '</xliff:g>' in line:
+        return 'example' in line.lower() or 'placeholder' in line.lower()
+    return False
+
+
+def convert_strings_file(input_path: Path):
+    """处理单个 strings*.txt 文件，输出到同目录"""
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        converted = convert_text(content)
+            lines = f.readlines()
+
+        converted_lines = []
+        for line in lines:
+            # 保留原始换行
+            if should_skip_line(line):
+                converted_lines.append(line)
+                continue
+
+            # 尝试匹配 <string name="xxx">繁体内容</string>
+            match = re.match(r'^(\s*)<string\s+name="[^"]+"\s*>(.*?)</string>\s*$', line, re.DOTALL)
+            if match:
+                indent = match.group(1)
+                content = match.group(2)
+                # 只转换 string 标签内的文本内容
+                converted_content = convert_text(content)
+                # 重新拼接（保留原 name）
+                name_part = line.split('name="')[1].split('"')[0]
+                new_line = f'{indent}<string name="{name_part}">{converted_content}</string>\n'
+                converted_lines.append(new_line)
+            else:
+                # 非标准 string 格式的行 → 整行转换（比较安全）
+                converted_lines.append(convert_text(line))
+
+        # 输出文件名：原文件名 + _sc
+        output_filename = input_path.stem + "_sc" + input_path.suffix
+        output_path = input_path.parent / output_filename
+
         with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(converted)
-        print(f"✓ TXT 转换完成: {input_path} → {output_path}")
+            f.writelines(converted_lines)
+
+        print(f"✓ 转换完成: {input_path.name} → {output_filename}")
+
     except Exception as e:
-        print(f"✗ TXT 转换失败 {input_path}: {e}")
+        print(f"✗ 转换失败 {input_path.name}: {e}")
 
-def convert_pdf_file(input_path, output_path):
-    """转换 .pdf 文件（提取文本后转换）"""
-    if not PDF_SUPPORT:
-        print(f"✗ PDF 支持未启用: {input_path}")
-        return
-    try:
-        with pdfplumber.open(input_path) as pdf:
-            full_text = ""
-            for page in pdf.pages:
-                full_text += page.extract_text() or ""
-        converted = convert_text(full_text)
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(converted)  # 输出为 .txt
-        print(f"✓ PDF 转换完成: {input_path} → {output_path}")
-    except Exception as e:
-        print(f"✗ PDF 转换失败 {input_path}: {e}")
 
-def process_file(input_path, output_base):
-    """处理单个文件，output_base 可以是文件或目录路径"""
-    input_path = Path(input_path)
-    if input_path.suffix.lower() not in {".txt", ".pdf"}:
-        print(f"✗ 不支持的文件类型: {input_path}")
-        return
+def main():
+    import argparse
 
-    if Path(output_base).suffix:  # 如果 output_base 有扩展名，视为单个文件输出
-        output_path = Path(output_base)
-        output_path.parent.mkdir(exist_ok=True)  # 只创建父目录
-    else:  # 视为输出目录
-        output_dir = Path(output_base)
-        output_dir.mkdir(exist_ok=True)
-        output_filename = input_path.stem + "_simplified" + input_path.suffix
-        if input_path.suffix == ".pdf":
-            output_filename = input_path.stem + "_simplified.txt"
-        output_path = output_dir / output_filename
+    parser = argparse.ArgumentParser(description="繁体中文 strings.txt 转简体工具（适用于 Android 资源文件）")
+    parser.add_argument("path", nargs="?", default=".", 
+                        help="文件或目录路径（默认：当前目录）")
+    args = parser.parse_args()
 
-    if input_path.suffix.lower() == ".txt":
-        convert_txt_file(input_path, output_path)
-    elif input_path.suffix.lower() == ".pdf":
-        convert_pdf_file(input_path, output_path)
+    target = Path(args.path).resolve()
+
+    if not target.exists():
+        print(f"错误：路径不存在 → {target}")
+        sys.exit(1)
+
+    # 支持的文件名特征（可自行扩展）
+    target_patterns = ("string-zh-rHK.txt", "string-zh-rTW.txt", "strings-zh-rHK.txt", "strings-zh-rTW.txt")
+
+    if target.is_file():
+        if target.name.lower().endswith(".txt") and any(p in target.name for p in target_patterns):
+            convert_strings_file(target)
+        else:
+            print("错误：请输入以 string-zh-rHK.txt 或 string-zh-rTW.txt 结尾的文件")
+            sys.exit(1)
+
+    elif target.is_dir():
+        print(f"扫描目录：{target}")
+        found = False
+        for file in target.glob("**/*"):
+            if not file.is_file():
+                continue
+            if file.suffix.lower() != ".txt":
+                continue
+            if any(p in file.name for p in target_patterns):
+                convert_strings_file(file)
+                found = True
+
+        if not found:
+            print("在目录及其子目录中没有找到符合文件名的文件（string-zh-r*）")
     else:
-        print(f"✗ 不支持的文件类型: {input_path}")
+        print("错误：无效的路径")
+        sys.exit(1)
 
-def batch_process(input_dir, output_dir):
-    """批量处理目录"""
-    input_dir = Path(input_dir)
-    output_dir = Path(output_dir)
-    output_dir.mkdir(exist_ok=True)
-    
-    supported_exts = {".txt", ".pdf"}
-    files = [f for f in input_dir.rglob("*") if f.is_file() and f.suffix.lower() in supported_exts]
-    
-    if not files:
-        print("未找到支持的文件 (.txt 或 .pdf)")
-        return
-    
-    print(f"发现 {len(files)} 个文件，开始批量转换...")
-    for file_path in files:
-        process_file(file_path, output_dir)
-    print("批量转换完成！")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="繁体转简体中文转换工具")
-    parser.add_argument("input", help="输入文件或目录路径")
-    parser.add_argument("output", nargs="?", default="output", help="输出文件或目录 (默认: output)")
-    args = parser.parse_args()
-    
-    input_path = Path(args.input)
-    
-    if not input_path.exists():
-        print(f"错误：输入路径不存在 {args.input}")
-        sys.exit(1)
-    
-    if input_path.is_file():
-        process_file(input_path, args.output)  # 直接处理单个文件，output 可以是文件或目录
-    elif input_path.is_dir():
-        batch_process(input_path, args.output)
-    else:
-        print(f"错误：无效路径 {args.input}")
-        sys.exit(1)
+    main()
