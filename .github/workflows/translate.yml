@@ -40,11 +40,12 @@ jobs:
           else
             echo "找到 ${#files[@]} 个文件："
             printf '%s\n' "${files[@]}"
+            echo "开始执行转换..."
             python converter.py "${files[@]}"
             echo "files_found=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: 提交生成的 _sc 文件（每次都提交 + debug）
+      - name: 提交生成的 _sc 文件（每次都提交 + 强制 add + debug）
         if: steps.find-files.outputs.files_found == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
@@ -59,14 +60,20 @@ jobs:
           echo "=== git status 前 ==="
           git status
 
-          # 添加所有 _sc 文件
-          git add **/*_sc.* 2>/dev/null || true
-          git add ./**/*_sc.* 2>/dev/null || true
+          # 明確逐個強制 add 找到的 _sc 文件
+          mapfile -t sc_files < <(find . -type f -name "*_sc.*" -print 2>/dev/null || true)
+          if [ ${#sc_files[@]} -gt 0 ]; then
+            for file in "${sc_files[@]}"; do
+              git add -f "$file" && echo "已成功 add: $file"
+            done
+          else
+            echo "警告：沒有找到任何 _sc 文件，無法 add"
+          fi
 
           echo "=== git status 后 add ==="
           git status
 
-          # 强制 commit（即使空）
+          # 強制 commit，即使沒有變化
           git commit --allow-empty -m "chore: 繁体 → 简体转换执行 ($(date '+%Y-%m-%d %H:%M:%S')) [ci skip]"
 
           echo "=== 最新 commit 详情 ==="
@@ -78,7 +85,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 上传转换结果作为 Artifact（备用）
+      - name: 上传转换结果作为 Artifact（备用检查）
         if: always()
         uses: actions/upload-artifact@v4
         with:
