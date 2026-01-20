@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # 這行確保可以 commit & push
+  contents: write
 
 jobs:
   convert-and-commit:
@@ -13,7 +13,7 @@ jobs:
       - name: 检出代码（带完整历史）
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 確保能正常 diff 和 commit
+          fetch-depth: 0
 
       - name: 设置 Python
         uses: actions/setup-python@v5
@@ -25,49 +25,48 @@ jobs:
           pip install --no-cache-dir opencc-python-reimplemented
 
       - name: 查找并转换所有 zh-rHK / zh-rTW 文件
+        id: find-files
         run: |
           echo "开始查找繁体中文 strings 文件..."
 
-          # 查找常見的 zh-rHK / zh-rTW 文件（可根據你的倉庫結構調整模式）
           mapfile -t files < <(find . -type f \
             \( -name "*zh-rHK*.xml" -o -name "*zh-rTW*.xml" \
             -o -name "*zh-rHK*.txt" -o -name "*zh-rTW*.txt" \) \
-            ! -name "*_sc.*" -not -path "*/.git/*" 2>/dev/null)
+            ! -name "*_sc.*" -not -path "*/.git/*" 2>/dev/null || true)
 
           if [ ${#files[@]} -eq 0 ]; then
-            echo "未找到任何符合条件的繁体文件，结束。"
-            exit 0
+            echo "未找到任何符合条件的繁体文件"
+            echo "files_found=false" >> $GITHUB_OUTPUT
+          else
+            echo "找到 ${#files[@]} 个文件，开始转换..."
+            python converter.py "${files[@]}"
+            echo "files_found=true" >> $GITHUB_OUTPUT
           fi
 
-          echo "找到 ${#files[@]} 个文件，开始转换..."
-          python converter.py "${files[@]}"
-
-      - name: 提交所有生成的 _sc 文件到仓库
+      - name: 提交生成的 _sc 文件（每次都提交，即使無變化）
+        if: steps.find-files.outputs.files_found == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          # 添加所有新生成的 _sc 文件（保持目錄結構）
+          # 添加所有 _sc 檔案（保持原目錄結構）
           git add **/*_sc.* 2>/dev/null || true
           git add ./**/*_sc.* 2>/dev/null || true
 
-          # 只在有實際變更時才 commit
-          if git diff --cached --quiet; then
-            echo "没有新的翻译内容，跳过提交"
-          else
-            git commit -m "chore: 自动繁体 → 简体转换 ($(date '+%Y-%m-%d %H:%M:%S')) [ci skip]"
-            git push origin HEAD:${{ github.ref_name }}
-            echo "已推送 ${#files[@]} 个文件的简体版本到仓库"
-          fi
+          # 強制 commit（即使沒有變化也提交）
+          git commit --allow-empty -m "chore: 繁体 → 简体转换执行 ($(date '+%Y-%m-%d %H:%M:%S')) [ci skip]"
+
+          # 推送（使用當前分支）
+          git push origin HEAD:${{ github.ref_name }}
+          echo "已推送生成的 _sc 文件到倉庫"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # （可选）還是保留 artifact，方便你快速檢查
-      - name: 上传转换结果（Artifact，可选下载验证）
+      - name: 上传转换结果作为 Artifact（方便檢查）
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: simplified-strings-files
+          name: simplified-strings
           path: |
             **/*_sc.*
           if-no-files-found: warn
