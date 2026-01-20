@@ -5,21 +5,22 @@ Android strings 文件 繁体 → 简体 转换工具（支持多个文件）
 
 用法：
   python converter.py file1.txt file2.txt
-  python converter.py res/values-zh-rHK/*.txt
-  python converter.py path/to/file1.txt another/path/file2.xml
+  python converter.py res/values-zh-rHK/strings.txt res/values-zh-rTW/strings.txt
 
-转换后：
-- 输出文件放在与输入文件相同目录
-- 文件名后缀加 _sc （在原 stem 后加 _sc）
+特点：
+- 只转换 <string name="..."> 标签内的文本内容
+- 保留 XML 结构、注释、空行
+- 输出文件放在原文件同目录，文件名后加 _sc
+- 即使转换后内容相同，也强制覆盖写入文件（确保 git 能检测到变化）
 """
 
 from opencc import OpenCC
 import sys
-from pathlib import Path
 import re
+from pathlib import Path
 
 
-def convert_content(content: str) -> str:
+def convert_text(content: str) -> str:
     """繁体 → 简体"""
     converter = OpenCC('t2s')
     return converter.convert(content)
@@ -33,25 +34,32 @@ def convert_strings_file(input_path: Path) -> Path | None:
         converted_lines = []
         for line in lines:
             stripped = line.strip()
-            if not stripped or stripped.startswith('<!--') or stripped.startswith('<!--'):
+            # 保留空行、注释、resources 标签等
+            if not stripped or stripped.startswith('<!--') or stripped.startswith('<resources') or stripped.startswith('</resources'):
                 converted_lines.append(line)
                 continue
 
-            # 尝试匹配 <string name="xxx">内容</string> 这一行
+            # 匹配 <string name="xxx">内容</string>
+            # 支持带转义字符的简单情况
             match = re.match(r'^(\s*<string\s+name="[^"]*">)(.*?)(</string>\s*)$', line.strip(), re.DOTALL)
             if match:
                 prefix, text, suffix = match.groups()
-                converted_text = convert_content(text)
-                converted_lines.append(f"{prefix}{converted_text}{suffix}\n")
+                # 只转译标签内的文本
+                converted_text = convert_text(text)
+                # 重新拼接，保持原缩进
+                indent = line[:line.find('<string')] if '<string' in line else ''
+                new_line = f"{indent}{prefix}{converted_text}{suffix}\n"
+                converted_lines.append(new_line)
             else:
-                # 其他行整体转换（注释、<resources> 等）
-                converted_lines.append(convert_content(line))
+                # 其他行（如 plurals、注释等）整体转换
+                converted_lines.append(convert_text(line))
 
-        # 输出路径：同目录，文件名加 _sc
+        # 输出路径：同目录 + _sc 后缀
         output_path = input_path.with_stem(input_path.stem + '_sc')
-
+        
+        # 强制写入（即使内容相同）
         output_path.write_text(''.join(converted_lines), encoding='utf-8')
-        print(f"完成: {input_path} → {output_path}")
+        print(f"完成: {input_path} → {output_path} (强制写入)")
         return output_path
 
     except Exception as e:
@@ -62,18 +70,15 @@ def convert_strings_file(input_path: Path) -> Path | None:
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("用法: python converter.py <文件1> [文件2 文件3 ...]")
-        print("      支持通配符，例如: python converter.py res/**/*-zh-r*.txt")
         sys.exit(1)
 
     success_count = 0
     for arg in sys.argv[1:]:
         path = Path(arg)
-        if path.is_file():
-            if convert_strings_file(path):
-                success_count += 1
-        elif path.is_dir():
-            print(f"跳过目录（暂不支持递归）：{path}")
-        else:
-            print(f"路径不存在或不是文件：{arg}")
+        if not path.is_file():
+            print(f"跳过（不是文件）: {arg}")
+            continue
+        if convert_strings_file(path):
+            success_count += 1
 
     print(f"\n转换完成：成功 {success_count} / 总计 {len(sys.argv)-1} 个文件")
