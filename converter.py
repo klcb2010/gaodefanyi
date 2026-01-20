@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Android strings 文件 繁体 → 简体 转换工具（支持多个文件）
+Android strings 文件（.txt / .xml）繁体 → 简体 转换工具（支持多个文件）
 
 用法：
-  python converter.py file1.txt file2.txt
-  python converter.py res/values-zh-rHK/strings.txt res/values-zh-rTW/strings.txt
+  python converter.py string-zh-rHK.xml string-zh-rTW.xml
+  python converter.py res/values-zh-rHK/strings.xml res/values-zh-rTW/strings.xml
 
-特点：
-- 只转换 <string name="..."> 标签内的文本内容
-- 保留 XML 结构、注释、空行
-- 输出文件放在原文件同目录，文件名后加 _sc
-- 即使转换后内容相同，也强制覆盖写入文件（确保 git 能检测到变化）
+输出规则：
+- 输出文件放在原文件同目录
+- 文件名 = 原文件名 + .sc（例如 string-zh-rTW.xml → string-zh-rTW.xml.sc）
 """
 
 from opencc import OpenCC
@@ -34,30 +32,30 @@ def convert_strings_file(input_path: Path) -> Path | None:
         converted_lines = []
         for line in lines:
             stripped = line.strip()
-            # 保留空行、注释、resources 标签等
-            if not stripped or stripped.startswith('<!--') or stripped.startswith('<resources') or stripped.startswith('</resources'):
+            # 保留空行、注释、<resources>、</resources> 等結構行
+            if not stripped or stripped.startswith('<!--') or \
+               stripped.startswith('<resources') or stripped.startswith('</resources>'):
                 converted_lines.append(line)
                 continue
 
-            # 匹配 <string name="xxx">内容</string>
-            # 支持带转义字符的简单情况
+            # 匹配單行 <string name="xxx">內容</string>
             match = re.match(r'^(\s*<string\s+name="[^"]*">)(.*?)(</string>\s*)$', line.strip(), re.DOTALL)
             if match:
                 prefix, text, suffix = match.groups()
-                # 只转译标签内的文本
                 converted_text = convert_text(text)
-                # 重新拼接，保持原缩进
-                indent = line[:line.find('<string')] if '<string' in line else ''
+                # 保持原縮進
+                indent_match = re.match(r'^(\s*)<string', line)
+                indent = indent_match.group(1) if indent_match else ''
                 new_line = f"{indent}{prefix}{converted_text}{suffix}\n"
                 converted_lines.append(new_line)
             else:
-                # 其他行（如 plurals、注释等）整体转换
+                # 其他行（如 plurals、註釋、<item> 等）整體轉換
                 converted_lines.append(convert_text(line))
 
-        # 输出路径：同目录 + _sc 后缀
-        output_path = input_path.with_stem(input_path.stem + '_sc')
-        
-        # 强制写入（即使内容相同）
+        # 輸出檔名：原檔名 + .sc
+        output_path = input_path.with_suffix(input_path.suffix + '.sc')
+
+        # 強制寫入（即使內容相同）
         output_path.write_text(''.join(converted_lines), encoding='utf-8')
         print(f"完成: {input_path} → {output_path} (强制写入)")
         return output_path
@@ -70,6 +68,7 @@ def convert_strings_file(input_path: Path) -> Path | None:
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("用法: python converter.py <文件1> [文件2 文件3 ...]")
+        print("支持 .xml 和 .txt 檔，例如: python converter.py string-zh-rHK.xml string-zh-rTW.xml")
         sys.exit(1)
 
     success_count = 0
