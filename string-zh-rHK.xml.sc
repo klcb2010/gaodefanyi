@@ -69,6 +69,25 @@
     <string name="O105229_sport_widget_item2_unit">步</string>
     <string name="O105229_sport_widget_no_data_title">查看运动详情</string>
     <string name="O105229_sport_widget_no_login_title">点击登录查看</string>
+    <string name="O105240_above">以上</string>
+    <string name="O105240_all">全部</string>
+    <string name="O105240_all_line">全线</string>
+    <string name="O105240_classify">筛选</string>
+    <string name="O105240_discounted_charging_stations">优惠电站</string>
+    <string name="O105240_findHereWidgetNextLoading">正在搜索</string>
+    <string name="O105240_findHereWidgetNextNormal">在此区域搜索</string>
+    <string name="O105240_footer_error_text">网络异常，点击重新加载</string>
+    <string name="O105240_footer_loading_text2">正在加载，马上就来</string>
+    <string name="O105240_footer_no_more_text2">暂无更多内容</string>
+    <string name="O105240_footer_show_more_text">更多可能相关结果</string>
+    <string name="O105240_no_limit">不限</string>
+    <string name="O105240_no_result_in_screen_change_classify">屏幕范围无结果 
+换个筛选条件试试</string>
+    <string name="O105240_no_result_in_screen_change_position">屏幕范围无结果 
+换个位置试试</string>
+    <string name="O105240_range_01">%1$s-%2$s万元</string>
+    <string name="O105240_range_02">%1$s-%2$s元</string>
+    <string name="O105240_search_dialog_loading_text">正在加载...</string>
     <string name="O105244_1">甘</string>
     <string name="O105244_10">infoservice详情</string>
     <string name="O105244_100">鄂</string>
@@ -83,7 +102,6 @@
     <string name="O105244_109">服务返回 user token 为空。</string>
     <string name="O105244_11">黑</string>
     <string name="O105244_110">京</string>
-    <string name="O105244_111">正在加载</string>
     <string name="O105244_112">云</string>
     <string name="O105244_113">已切换到公网环境,开始清理缓存...!
 重启生效！</string>
@@ -115,7 +133,6 @@
     <string name="O105244_136">AppID、AppKey解析失败</string>
     <string name="O105244_137">北京大学</string>
     <string name="O105244_138">路况提醒</string>
-    <string name="O105244_139">自驾导航问题</string>
     <string name="O105244_14">继续扫描</string>
     <string name="O105244_140">出行保障</string>
     <string name="O105244_141">查巴士</string>
@@ -604,7 +621,6 @@ h5 fastweb离线资源包</string>
     <string name="O3476_24">稍等一下再试试</string>
     <string name="O3476_25">刷新</string>
     <string name="O3476_26">出错了</string>
-    <string name="O3476_27">出错啦</string>
     <string name="O3476_28">文件不存在：path=</string>
     <string name="O3476_29">action名称：</string>
     <string name="O3476_3">调用来源：</string>
@@ -616,7 +632,6 @@ h5 fastweb离线资源包</string>
     <string name="O3476_5">调用的接口不在白名单内</string>
     <string name="O3476_6">加载更多时，原始数据为空</string>
     <string name="O3476_7">网络不佳</string>
-    <string name="O3476_8">加载中…</string>
     <string name="O3476_9">h5梵天离线资源包:</string>
     <string name="O3507_1">30天</string>
     <string name="O3507_10">被覆盖版本信息:
@@ -634,13 +649,9 @@ h5 fastweb离线资源包</string>
     <string name="O3507_20">当前版本信息:
 </string>
     <string name="O3507_21">这条广告不支持schema场景下展示</string>
-    <string name="O3507_22">%d天</string>
     <string name="O3507_23">获取版本信息失败</string>
     <string name="O3507_24">的视频广告既没有视频物料也没有兜底图物料</string>
-    <string name="O3507_25">%d年%d月%d日结束</string>
     <string name="O3507_26">这条广告不支持后台切前台展示</string>
-    <string name="O3507_27">本服务由xxx提供</string>
-    <string name="O3507_28">Lottie下载成功，立即重启</string>
     <string name="O3507_29">互动跳转详情页面或第三方应用</string>
     <string name="O3507_3">文件异常(</string>
     <string name="O3507_30">有红点</string>
@@ -652,9 +663,7 @@ h5 fastweb离线资源包</string>
     <string name="O3507_36">所有广告都不在生效期内</string>
     <string name="O3507_37">本地预缓存数据为空</string>
     <string name="O3507_38">这条广告不在支持的屏幕高宽比范围内</string>
-    <string name="O3507_39">%d小时</string>
     <string name="O3507_4">)间隔控制.</string>
-    <string name="O3507_40">取消</string>
     <string name="O3507_41">的视频广告受到全局间隔控制.</string>
     <string name="O3507_42">的关键字段下发错误</string>
     <string name="O3507_43">无红点</string>
@@ -666,21 +675,17 @@ h5 fastweb离线资源包</string>
     <string name="O3507_49">的静态广告没有物料</string>
     <string name="O3507_5">跳过</string>
     <string name="O3507_50">临时文件不存在</string>
-    <string name="O3507_51">子标题不能为空</string>
     <string name="O3507_52">跳过广告</string>
     <string name="O3507_53">实时请求不支持非图片广告</string>
     <string name="O3507_54">预下发缓存为空可能是因为没有请求到</string>
     <string name="O3507_55">这条topview广告类型:</string>
     <string name="O3507_56">的视频广告受到单次冷启间隔控制.</string>
-    <string name="O3507_57">下载失败，请重试!</string>
-    <string name="O3507_58">确定</string>
     <string name="O3507_59">的视频广告受到场景(</string>
     <string name="O3507_6">正在下载</string>
     <string name="O3507_60">这条广告不支持车速过快展示</string>
     <string name="O3507_61">向上滑动 开启详情</string>
     <string name="O3507_62">无网络导致不发送预下载请求</string>
     <string name="O3507_63">这条CID=</string>
-    <string name="O3507_64">主标题不能为空</string>
     <string name="O3507_7">是否覆盖安装:</string>
     <string name="O3507_8">临时文件存在</string>
     <string name="O3507_9">的视频广告受到全局次数控制.</string>
@@ -721,14 +726,12 @@ h5 fastweb离线资源包</string>
     <string name="O3711_1">1小时15分钟</string>
     <string name="O3711_10">巴士规划</string>
     <string name="O3711_100">收藏的点</string>
-    <string name="O3711_101">分</string>
     <string name="O3711_102">地址名称</string>
     <string name="O3711_103">我的页</string>
     <string name="O3711_104">搜索</string>
     <string name="O3711_105">遥控器连接中断</string>
     <string name="O3711_106">名称最多10个字符</string>
     <string name="O3711_107">SD卡空间过小，请删除一些无用文件再试。</string>
-    <string name="O3711_108">分类搜索</string>
     <string name="O3711_109">3站·5分钟</string>
     <string name="O3711_11">HH:mm 获取定位失败，点击重试</string>
     <string name="O3711_110">票价不准</string>
@@ -738,7 +741,6 @@ h5 fastweb离线资源包</string>
     <string name="O3711_114">隐藏</string>
     <string name="O3711_115">出发</string>
     <string name="O3711_116">%%d分钟·%%d站</string>
-    <string name="O3711_117">地点</string>
     <string name="O3711_118">贴心台湾话</string>
     <string name="O3711_119">网络不畅，已自动转为离线路线规划</string>
     <string name="O3711_12">的点点滴滴打打,的点点滴滴打打,的点点滴滴打打打打...等5名用户也在此处上报</string>
@@ -794,13 +796,11 @@ h5 fastweb离线资源包</string>
     <string name="O3711_165">回家</string>
     <string name="O3711_166">推荐</string>
     <string name="O3711_167">离线导航引擎已经下载完成，需要重启后才可生效，若不重启不能使用离线导航功能。</string>
-    <string name="O3711_168">米</string>
     <string name="O3711_169">易烊千玺语音</string>
     <string name="O3711_17">麻辣四川话</string>
     <string name="O3711_170">高晓松语音</string>
     <string name="O3711_171">非最优方案</string>
     <string name="O3711_172">拥堵</string>
-    <string name="O3711_173">您上次的事故报警正在处理</string>
     <string name="O3711_174">全程32公里，推荐走北四环</string>
     <string name="O3711_175">事故</string>
     <string name="O3711_176">7月16日 11:54 更新</string>
@@ -820,12 +820,10 @@ h5 fastweb离线资源包</string>
     <string name="O3711_189">已记录您的汽车</string>
     <string name="O3711_19">连接成功！
 可以在首页使用遥控器了</string>
-    <string name="O3711_190">正在请求网络</string>
     <string name="O3711_191">匿名用户</string>
     <string name="O3711_192">小甜心语音</string>
     <string name="O3711_193">%%d小时%%d分钟·%%d站</string>
     <string name="O3711_194">确认终点</string>
-    <string name="O3711_195">更多筛选</string>
     <string name="O3711_2">林志玲性感语音</string>
     <string name="O3711_20">该功能需要定位或存储权限才可使用</string>
     <string name="O3711_21">语音包找不到了，请重新录制</string>
@@ -836,7 +834,6 @@ h5 fastweb离线资源包</string>
     <string name="O3711_26">最近一次更新</string>
     <string name="O3711_27">可以在首页使用遥控器了</string>
     <string name="O3711_28">换乘</string>
-    <string name="O3711_29">时</string>
     <string name="O3711_3">网络不畅且离线地图未找到结果，请检查网络后重试。</string>
     <string name="O3711_30">岳云鹏搞笑也专业语音</string>
     <string name="O3711_31">央视春晚语音</string>
@@ -847,7 +844,6 @@ h5 fastweb离线资源包</string>
     <string name="O3711_36">每次开启高德地图时会自动为您连接</string>
     <string name="O3711_37">默认语音</string>
     <string name="O3711_38">HH:mm 更新失败，点击重试</string>
-    <string name="O3711_39">&lt;1分钟</string>
     <string name="O3711_4">连接失败</string>
     <string name="O3711_40">自驾规划</string>
     <string name="O3711_41">更多历史记录</string>
@@ -888,7 +884,6 @@ h5 fastweb离线资源包</string>
     <string name="O3711_73">开始时间：0：00 - 5:00</string>
     <string name="O3711_74">点击查看详细路线</string>
     <string name="O3711_75">结束时段：0：00 - 5:00</string>
-    <string name="O3711_76">公里</string>
     <string name="O3711_77">切换导游</string>
     <string name="O3711_78">网络不畅，自动转为离线搜索</string>
     <string name="O3711_79">网络不畅，自动转为离线导航。</string>
@@ -1091,7 +1086,6 @@ h5 fastweb离线资源包</string>
     <string name="Title_Myzone">收藏夹</string>
     <string name="Title_Poserrorback">位置报错</string>
     <string name="Title_SearchFromTo">路线规划</string>
-    <string name="Title_SelectLocate">选择定位城市</string>
     <string name="Title_SetEnd">设置终点</string>
     <string name="Title_SetMid">设置途经点</string>
     <string name="Title_SetStart">设置起点</string>
@@ -1119,8 +1113,6 @@ h5 fastweb离线资源包</string>
     <string name="abstrct_poi_view_share">分享</string>
     <string name="abstrct_poi_view_shopping_mall">室内导览</string>
     <string name="accept">确认</string>
-    <string name="accept_amap_terms">同意高德地图</string>
-    <string name="accept_network">使用网络</string>
     <string name="accident_barrier">障碍</string>
     <string name="accident_car">故障车</string>
     <string name="accident_crash">事故</string>
@@ -1151,7 +1143,6 @@ h5 fastweb离线资源包</string>
     <string name="act_errback_pos_tel">电话</string>
     <string name="act_errback_pos_txt">备注</string>
     <string name="act_errback_submitok">谢谢您的反馈，我们将尽快处理。</string>
-    <string name="act_feedback_btn_submit">提交</string>
     <string name="act_feedback_error_abovemax">反馈内容不能超过200个字！</string>
     <string name="act_feedback_error_emptyinput">反馈内容不能为空！</string>
     <string name="act_feedback_submitok">谢谢您的反馈。</string>
@@ -1174,7 +1165,6 @@ h5 fastweb离线资源包</string>
     <string name="act_fromto_from_input_hint">输入起点</string>
     <string name="act_fromto_from_tip">请选择起点</string>
     <string name="act_fromto_frommap">地图指定位置</string>
-    <string name="act_fromto_home_input_hint">请输入家庭住址</string>
     <string name="act_fromto_len_des">全程约</string>
     <string name="act_fromto_mid">经</string>
     <string name="act_fromto_mid_hint">请选择途经点</string>
@@ -1202,7 +1192,6 @@ h5 fastweb离线资源包</string>
     <string name="act_st_id">GS（2013）6004号</string>
     <string name="act_st_name">卫星图片提供商：</string>
     <string name="act_update_defaulttext">有新版本软件，是否下载安装？</string>
-    <string name="act_update_nonet">当前网络不可用，请检查网络后重试！</string>
     <string name="act_update_noupdate">您的软件已是最新版本。</string>
     <string name="act_weibo_regempty">您没有同步任何账号。</string>
     <string name="act_weibopub_error_empty">输入内容为空。</string>
@@ -1284,8 +1273,6 @@ h5 fastweb离线资源包</string>
     <string name="activities_go_to_tell">快去告诉</string>
     <string name="activities_have_apply_payfor">已申请</string>
     <string name="activities_know_about_safety">了解出行保障</string>
-    <string name="activities_loading">正在获取活动信息，请稍候</string>
-    <string name="activities_my_award">我的奖品</string>
     <string name="activities_native_navi_date_empty_info">使用导航功能，如目的地错误，可直接申请赔付！</string>
     <string name="activities_navi_date_title">%1$s月%2$s日</string>
     <string name="activities_navi_feedback_description">注：报错反馈在「&lt;font color=#0091FF&gt;%1$s&lt;/font&gt;」中可查</string>
@@ -1311,7 +1298,6 @@ h5 fastweb离线资源包</string>
     <string name="activities_take_photo_tips_clear">提示：照片要清晰显示目的地名称</string>
     <string name="activities_your_navigation_destination">您的导航目的地:%1$s</string>
     <string name="activities_your_phonenumber">您的手机号码</string>
-    <string name="activities_zone">活动专区</string>
     <string name="adapter_instantiateitemfromrecycler_return_null">开启了RecyclableViewPager的Recycler，但是设置的Adapter的instantiateItemFromRecycler返回值为空。可以通过setUseRecycler()来关闭Recycler或者请确保正确Override了instantiateItemFromRecycler方法</string>
     <string name="add">添加</string>
     <string name="add_car_exist">车辆已存在</string>
@@ -1320,7 +1306,6 @@ h5 fastweb离线资源包</string>
     <string name="add_day_description">时间加</string>
     <string name="add_description">新增描述</string>
     <string name="add_door_pic">请添加门牌号照片</string>
-    <string name="add_fav_poi">添加收藏点</string>
     <string name="add_favorites_failed">收藏失败</string>
     <string name="add_favorites_success">已收藏</string>
     <string name="add_favourite_successful">添加成功</string>
@@ -1355,7 +1340,6 @@ h5 fastweb离线资源包</string>
     <string name="addr">地址：</string>
     <string name="address">地址：</string>
     <string name="address_">地址</string>
-    <string name="address_name">地点名称</string>
     <string name="admission_ticket_cost">门票:￥&lt;font color="#e44853"&gt;%s&lt;/font&gt;起</string>
     <string name="adword1">新店： 芍药居店 免费入会员aaaaaaaasasdfasdfdfasdfasdfasdfsdfasdfasdfaaaaaaaa</string>
     <string name="after_left_car">下车后</string>
@@ -1477,7 +1461,6 @@ h5 fastweb离线资源包</string>
     <string name="anchor_type_transportation">行</string>
     <string name="anchor_type_travel">游</string>
     <string name="anchored">半图半列表</string>
-    <string name="and">和</string>
     <string name="another_is_find">您是不是要找：</string>
     <string name="aomp_passport_auth_cancel">取消</string>
     <string name="aomp_passport_auth_fail">扫描失败</string>
@@ -1590,7 +1573,6 @@ h5 fastweb离线资源包</string>
     <string name="autonavi_already_avoid_incident_with_comma">，已避开</string>
     <string name="autonavi_already_avoid_jam">已避开</string>
     <string name="autonavi_and_so_on">等</string>
-    <string name="autonavi_announcement">购票需知</string>
     <string name="autonavi_app_name_in_route">高德地图</string>
     <string name="autonavi_audio_switch_closed">当前处于静音模式</string>
     <string name="autonavi_avoid_jam_bad_suff">拥堵</string>
@@ -1711,7 +1693,6 @@ h5 fastweb离线资源包</string>
     <string name="autonavi_known_detail">了解详情</string>
     <string name="autonavi_map_service_tip">高德地图服务条款</string>
     <string name="autonavi_map_service_tips">高德地图服务条款</string>
-    <string name="autonavi_more_condition">更多条件</string>
     <string name="autonavi_motorbike_online_prompt">摩托车导航使用提示</string>
     <string name="autonavi_navi_audio_switch_closed">当前导航处于静音模式</string>
     <string name="autonavi_navi_common_already_useing">已使用</string>
@@ -1757,7 +1738,6 @@ h5 fastweb离线资源包</string>
     <string name="autonavi_route_start_not_supported">起点不在支持范围内</string>
     <string name="autonavi_route_via_not_supported">途经点不在支持范围内</string>
     <string name="autonavi_schedule_reroute_success_title">已为您切换至交警推荐路线</string>
-    <string name="autonavi_search_category">分类搜索</string>
     <string name="autonavi_search_result_about">约</string>
     <string name="autonavi_search_result_set_destination_voice">已为您推荐终点附近停车场，点击前往</string>
     <string name="autonavi_search_result_to_dest_dis">距终点</string>
@@ -1796,8 +1776,6 @@ h5 fastweb离线资源包</string>
     <string name="autonavi_traffic_remind_reminder">路况提醒</string>
     <string name="autonavi_traffic_remind_tips">订阅路况，每日为您推荐上下班躲避拥堵路线</string>
     <string name="autonavi_train_default_text">轻松购票 快捷支付</string>
-    <string name="autonavi_train_search">列车查询</string>
-    <string name="autonavi_train_search_shanghai_hongqiao">上海虹桥</string>
     <string name="autonavi_travel_not_configure_link_tips">还未配调用链接</string>
     <string name="autonavi_truck_online_prompt">货车导航使用提示</string>
     <string name="autonavi_util_pass_name">途经点</string>
@@ -2000,18 +1978,7 @@ h5 fastweb离线资源包</string>
     <string name="bus_navi_changeride">换乘</string>
     <string name="bus_navi_choice">请选择您乘坐的车次</string>
     <string name="bus_navi_close_dialog">关闭</string>
-    <string name="bus_navi_declare">感谢您使用高德地图巴士地铁导航！
-为了便于您更好的了解和行使个人权益，使得高德地图成为您值得信赖的地图导航产品，高德地图将向您介绍高德地图巴士地铁导航服务涉及的部分个人信息处理情况及使用提示。请您相信，高德地图将以合法、正当、必要和诚信原则处理您的个人信息。
-【位置信息】
-当您开启设备定位权限并开始使用高德地图提供的定位服务时，高德地图会使用包括通过 IP 地址、卫星信号以及能够提供相关信息的其他传感器（比如说可能会为高德地图提供附近设备、WLAN接入点和基站的信息）等各种方式提供定位服务。在为您提供定位、下车提醒等相关的导航服务时，高德地图会收集您的动态位置信息。
-当您进行路线规划后，高德识别您已在当前路线规划的行程中，为了便于您及时了解巴士地铁换乘、到站情况，为您提供巴士地铁换乘、下车提醒，高德地图将为您开启巴士地铁导航功能。您可通过点击「导航中」关闭当前路线导航，也可通过当前路线设置，或「我的-设置-导航设置-巴士」，关闭自动开启巴士导航开关。
-【使用提示】
-● 请您务必在确保安全的前提下使用本软件，以防发生交通事故或其他危险情况，产生不必要的损失。
-● 您理解并同意，尽管高德一直致力于持续、快速地更新地图数据，提供更优质的服务，但由于现实环境持续变化，技术、设备和网络限制，以及其他高德不能合理预见、控制或克服的各种因素的影响，高德地图数据会存在与现实状况不完全一致的客观情况，下车或换乘提醒可能并不完全及时或准确，高德不保证地图数据和相关服务的准确性、及时性、完整性。因此，为了最大限度保障出行安全，本软件提供的路线规划、导航等功能和服务仅供您参考使用，请您在乘车时注意收听车辆下车播报，换乘车辆前注意观察站牌信息。
-● 您在使用本软件的导航功能过程中可能会产生网络流量费用，该费用由您的电信服务商收取，具体收费标准请向其咨询。
-● 如您违反法律法规及上述提示产生的一切损失，高德地图不承担除法律法规明确规定外的责任。
-● 在使用高德地图巴士地铁导航前，请您认真阅读并充分理解《高德服务条款》及《高德隐私权政策》，如果您存有疑问，在开始使用高德地图巴士地铁导航前，您可通过高德地图客服联系方式进行咨询，高德地图将为您进一步解释说明相关内容。在您理解并同意本提示后，应接受本条款所有内容的约束，并可使用高德地图巴士地铁导航服务。
-</string>
+    <string name="bus_navi_declare">感谢您使用高德地图巴士地铁导航！ 为了便于您更好的了解和行使个人权益，使得高德地图成为您值得信赖的地图导航产品，高德地图将向您介绍高德地图巴士地铁导航服务涉及的部分个人信息处理情况及使用提示。请您相信，高德地图将以合法、正当、必要和诚信原则处理您的个人信息。 【位置信息】 当您开启设备定位权限并开始使用高德地图提供的定位服务时，高德地图会使用包括通过 IP 地址、卫星信号以及能够提供相关信息的其他传感器（比如说可能会为高德地图提供附近设备、WLAN接入点和基站的信息）等各种方式提供定位服务。在为您提供定位、下车提醒等相关的导航服务时，高德地图会收集您的动态位置信息。 当您进行路线规划后，高德识别您已在当前路线规划的行程中，为了便于您及时了解巴士地铁换乘、到站情况，为您提供巴士地铁换乘、下车提醒，高德地图将为您开启巴士地铁导航功能。您可通过点击“导航中”关闭当前路线导航，也可通过当前路线设置，或“我的-设置-导航设置-巴士”，关闭自动开启巴士导航开关。 【使用提示】 ● 请您务必在确保安全的前提下使用本软件，以防发生交通事故或其他危险情况，产生不必要的损失。 ● 您理解并同意，尽管高德一直致力于持续、快速地更新地图数据，提供更优质的服务，但由于现实环境持续变化，技术、设备和网络限制，以及其他高德不能合理预见、控制或克服的各种因素的影响，高德地图数据会存在与现实状况不完全一致的客观情况，下车或换乘提醒可能并不完全及时或准确，高德不保证地图数据和相关服务的准确性、及时性、完整性。因此，为了最大限度保障出行安全，本软件提供的路线规划、导航等功能和服务仅供您参考使用，请您在乘车时注意收听车辆下车播报，换乘车辆前注意观察站牌信息。 ● 您在使用本软件的导航功能过程中可能会产生网络流量费用，该费用由您的电信服务商收取，具体收费标准请向其咨询。 ● 如您违反法律法规及上述提示产生的一切损失，高德地图不承担除法律法规明确规定外的责任。 ● 在使用高德地图巴士地铁导航前，请您认真阅读并充分理解《高德服务条款》及《高德隐私权政策》，如果您存有疑问，在开始使用高德地图巴士地铁导航前，您可通过高德地图客服联系方式进行咨询，高德地图将为您进一步解释说明相关内容。在您理解并同意本提示后，应接受本条款所有内容的约束，并可使用高德地图巴士地铁导航服务。</string>
     <string name="bus_navi_exit_with_remind">离开当前页面后无法进行下车提醒</string>
     <string name="bus_navi_footnavi_offroute_tip">您已偏离路线</string>
     <string name="bus_navi_footnavi_offrouteinfo">您可能已偏离路线，请留意</string>
@@ -2146,7 +2113,6 @@ h5 fastweb离线资源包</string>
     <string name="busline_whole_journey">全程:</string>
     <string name="busnavi_get_off_remind_close">下车提醒已关闭</string>
     <string name="busnavi_get_off_remind_open">下车提醒已开启</string>
-    <string name="bussiness_area">商圈</string>
     <string name="button_text_arround">周边</string>
     <string name="button_text_audio">换导游</string>
     <string name="button_text_book">订票</string>
@@ -2224,7 +2190,6 @@ h5 fastweb离线资源包</string>
     <string name="car_error_radio_play_content_error">播报内容有误</string>
     <string name="car_error_radio_road_bad">路况较差</string>
     <string name="car_error_radio_single_direction">单向通行</string>
-    <string name="car_iileage">违章查询</string>
     <string name="car_illeage_welcome">高德地图正带您去&lt;font color=0xfd4b4b&gt;违章查询&lt;/font&gt;&lt;br&gt;请稍等...</string>
     <string name="car_license_expried_tips_spanned">您的车辆年检已过期</string>
     <string name="car_license_normal_over_year_spanned">距离您的车辆年检还有</string>
@@ -2354,7 +2319,6 @@ h5 fastweb离线资源包</string>
     <string name="city_8">城市吧 http://www.city8.com</string>
     <string name="city_choose">城市选择</string>
     <string name="city_suggestion_nums">共%1$d条</string>
-    <string name="city_sugggestion_item_name_default">城市建议</string>
     <string name="citylife_drawable">精品生活</string>
     <string name="classify">筛选</string>
     <string name="clean_enlargeDownload">将清空所有路口放大图离线数据，是否继续？</string>
@@ -2398,8 +2362,6 @@ h5 fastweb离线资源包</string>
     <string name="coach_last_depart_time">前乘车</string>
     <string name="coach_no_stock">已售罄</string>
     <string name="coach_non_shift_type">固定班次</string>
-    <string name="coach_order_loading">正在搜索客车票</string>
-    <string name="coach_order_title">客车票订单</string>
     <string name="coach_plan_elong_network_error">暂时无法购票，请稍后再试</string>
     <string name="coach_shift_type">客满发车</string>
     <string name="coach_stock_only">仅剩</string>
@@ -2596,12 +2558,6 @@ h5 fastweb离线资源包</string>
     <string name="debug_running_history_preview_yesterday">昨天</string>
     <string name="debug_time_choose">8月9号</string>
     <string name="debug_time_show_week">周一</string>
-    <string name="debug_train_arrival_station">上海虹桥站</string>
-    <string name="debug_train_cheapest_ticket_remain_mount">仅剩6张</string>
-    <string name="debug_train_departure_station">北京南站</string>
-    <string name="debug_train_min_ticket_price">¥543起</string>
-    <string name="debug_train_running_time">26时45分</string>
-    <string name="debug_train_seat_info">商务座128张</string>
     <string name="dec_qrcode">识别图中二维码</string>
     <string name="default_back">返回</string>
     <string name="default_city">北京</string>
@@ -2632,7 +2588,6 @@ h5 fastweb离线资源包</string>
     <string name="delete_map_streetview">删除地图、实景以及其他缓存文件和图片</string>
     <string name="delete_plate_success_motor">删除成功</string>
     <string name="delete_rightnow">立即删除</string>
-    <string name="delete_save">删除收藏</string>
     <string name="delete_tag_title">删除这条线路</string>
     <string name="delete_tip">删除</string>
     <string name="delete_toast">已删除该收藏</string>
@@ -2737,6 +2692,7 @@ h5 fastweb离线资源包</string>
     <string name="desktopwidget_dynamic_widget_member_init_title_new">尊贵的高德达人</string>
     <string name="desktopwidget_dynamic_widget_member_label">高德达人</string>
     <string name="desktopwidget_dynamic_widget_member_navibar_title">高德达人</string>
+    <string name="desktopwidget_dynamic_widget_ranklist_label">扫街榜</string>
     <string name="desktopwidget_dynamic_widget_taxi_desc">一键打车快人一步</string>
     <string name="desktopwidget_dynamic_widget_taxi_label">打车卡</string>
     <string name="desktopwidget_dynamic_widget_update_failed_with_time">HH:mm 更新失败</string>
@@ -2788,9 +2744,6 @@ h5 fastweb离线资源包</string>
     <string name="diy_main_entry_agroup_info">%s人</string>
     <string name="do_delete">确定要删除此项收藏吗？</string>
     <string name="do_not_notify_any_more">不再提示</string>
-    <string name="do_not_use_all_tag">请不要使用「全部」标签</string>
-    <string name="do_not_use_company_tag">公司为特殊标签, 请在公司收藏点中修改地址</string>
-    <string name="do_not_use_home_tag">家为特殊标签,请在家收藏点中修改地址</string>
     <string name="done_label">确定</string>
     <string name="double_photo_take_example">照片示例 &gt;&gt;</string>
     <string name="double_photo_take_text">拍照有效金币翻倍</string>
@@ -2826,7 +2779,6 @@ h5 fastweb离线资源包</string>
     <string name="drive_have_not_finish_download_offline_data">您还没有下载完离线数据哦。</string>
     <string name="drive_joint_debugging_tools">自驾联调测试环境工具开关</string>
     <string name="drive_location_failed">未定位成功…</string>
-    <string name="drive_navigation_issue">自驾导航问题</string>
     <string name="drive_no_offline_result_switch_to_net">无离线搜索结果，是否切换到网络搜索？</string>
     <string name="drive_no_result_please_retry_later">未找到结果，请稍后重试!</string>
     <string name="drive_please_wait2">请稍候…</string>
@@ -2879,7 +2831,6 @@ h5 fastweb离线资源包</string>
     <string name="edit_one_tag_page_title">编辑这个标签</string>
     <string name="edit_one_tag_tip">请输入名称</string>
     <string name="edit_photo">编辑照片</string>
-    <string name="edit_save_point">编辑收藏的点</string>
     <string name="edit_saved_fav_poi">编辑收藏的点</string>
     <string name="edit_system_default_tag_tip">不能新建系统默认标签</string>
     <string name="edog_accident_caution">事故易发地段 注意危险</string>
@@ -2923,9 +2874,6 @@ h5 fastweb离线资源包</string>
     <string name="email_share_get_content_failed">获取分享内容失败，请重试</string>
     <string name="email_share_no_email_account">您的手机尚未配置邮箱帐户，暂时无法发送邮件</string>
     <string name="emergency_event">紧急事件</string>
-    <string name="empty_push">暂无订单，下拉刷新重试</string>
-    <string name="empty_push_test">部分第三方网站完成的订单不在高德订单中心显示</string>
-    <string name="ended">已结束</string>
     <string name="ending_point">终点</string>
     <string name="enegry_plan_cloud_close">暂不支持新能源规划</string>
     <string name="engine_initialization">引擎初始化</string>
@@ -2939,7 +2887,6 @@ h5 fastweb离线资源包</string>
     <string name="enter_building">进入建筑物</string>
     <string name="enter_indoor">进入室内</string>
     <string name="enter_load_offline_data">下载离线数据</string>
-    <string name="enter_map">进入地图</string>
     <string name="entry_amap">同意并继续</string>
     <string name="entry_application">进入应用</string>
     <string name="err_double_mid_route">途经线路错误</string>
@@ -2951,7 +2898,6 @@ h5 fastweb离线资源包</string>
     <string name="err_sufix">条未提交的导航报错</string>
     <string name="err_tip_location">出现错误提示的位置</string>
     <string name="error_access_exception">请描述什么情况下触发存储异常提示</string>
-    <string name="error_activities">现在暂无活动噢,敬请期待!</string>
     <string name="error_all_submit">导航报错都已提交</string>
     <string name="error_already_be_friend">你们已经是好友了，请勿重复添加</string>
     <string name="error_already_made_a_comment">您已评论，请勿重复提交。</string>
@@ -2960,7 +2906,6 @@ h5 fastweb离线资源包</string>
     <string name="error_bus_detail_page_busline_hint1">缺少的线路是</string>
     <string name="error_category_list_title">请选择问题类型</string>
     <string name="error_check_network_and_retry">请检查网络后重试</string>
-    <string name="error_city_both_default">当前区域未找到相关结果</string>
     <string name="error_city_download">请描述具体哪个城市，在什么情况下无法下载</string>
     <string name="error_city_use">请描述具体哪个城市，在什么情况下无法使用</string>
     <string name="error_contains_sensitive_words">包含敏感词汇</string>
@@ -3082,43 +3027,8 @@ h5 fastweb离线资源包</string>
     <string name="exit_navi_done_confirm">退出</string>
     <string name="exit_navi_msg">确认要退出导航?</string>
     <string name="exit_vioce">退出语音助手</string>
-    <string name="exo_controls_fastforward_description">向前快转</string>
-    <string name="exo_controls_fullscreen_description">全萤幕模式</string>
-    <string name="exo_controls_next_description">下一首曲目</string>
-    <string name="exo_controls_pause_description">暂停</string>
-    <string name="exo_controls_play_description">播放</string>
-    <string name="exo_controls_previous_description">上一首曲目</string>
-    <string name="exo_controls_repeat_all_description">全部重复播放</string>
-    <string name="exo_controls_repeat_off_description">不重复播放</string>
-    <string name="exo_controls_repeat_one_description">重复播放单一项目</string>
-    <string name="exo_controls_rewind_description">倒转</string>
-    <string name="exo_controls_shuffle_description">随机播放</string>
-    <string name="exo_controls_stop_description">停止</string>
-    <string name="exo_controls_vr_description">虚拟现实模式</string>
-    <string name="exo_download_completed">下载完毕</string>
     <string name="exo_download_description">下载</string>
-    <string name="exo_download_downloading">正在下载</string>
-    <string name="exo_download_failed">下载失败</string>
     <string name="exo_download_notification_channel_name">下载内容</string>
-    <string name="exo_download_removing">正在移除下载内容</string>
-    <string name="exo_item_list">%1$s、%2$s</string>
-    <string name="exo_track_bitrate">%1$.2f Mbps</string>
-    <string name="exo_track_mono">单声道</string>
-    <string name="exo_track_resolution">%1$d × %2$d</string>
-    <string name="exo_track_role_alternate">其他</string>
-    <string name="exo_track_role_closed_captions">字幕</string>
-    <string name="exo_track_role_commentary">评论</string>
-    <string name="exo_track_role_supplementary">附加</string>
-    <string name="exo_track_selection_auto">自动</string>
-    <string name="exo_track_selection_none">无</string>
-    <string name="exo_track_selection_title_audio">音讯</string>
-    <string name="exo_track_selection_title_text">文字</string>
-    <string name="exo_track_selection_title_video">影片</string>
-    <string name="exo_track_stereo">立体声</string>
-    <string name="exo_track_surround">环回立体声</string>
-    <string name="exo_track_surround_5_point_1">5.1 环回立体声</string>
-    <string name="exo_track_surround_7_point_1">7.1 环回立体声</string>
-    <string name="exo_track_unknown">不明</string>
     <string name="expanded">全列表</string>
     <string name="expired_days">已过期</string>
     <string name="extendedwebview_in_progress">正在载入...</string>
@@ -3159,7 +3069,6 @@ h5 fastweb离线资源包</string>
     <string name="fav_qing_gou_xuan_dian">请勾选要添加的收藏点</string>
     <string name="fav_qing_shu_ru_nei_rong">请输入内容</string>
     <string name="fav_qu_xiao">取消</string>
-    <string name="fav_quan_xuan">全选</string>
     <string name="fav_que_ding">确定</string>
     <string name="fav_route_length">全程约</string>
     <string name="fav_saved_poi">收藏的点</string>
@@ -3208,6 +3117,7 @@ h5 fastweb离线资源包</string>
     <string name="favorites_poi_btn">地点</string>
     <string name="favorites_route">收藏的路线</string>
     <string name="favorites_route_btn">线路</string>
+    <string name="fb_app_loading">加载中...</string>
     <string name="feed_back_response">用户大人，您反馈的方恒购物中心问题，小德已经收到。我们正在紧密审核中，感谢您的反馈。</string>
     <string name="feed_back_source_0">POI详情页（普通）</string>
     <string name="feed_back_source_1">POI详情页（巴士）</string>
@@ -3306,7 +3216,6 @@ h5 fastweb离线资源包</string>
     <string name="feedback_drag_map_to_select_start_point">拖动图面选择道路的起点</string>
     <string name="feedback_drive_navi_error">自驾导航问题</string>
     <string name="feedback_drive_navi_time">请选择问题发生时间</string>
-    <string name="feedback_drive_nomore">没有更多了</string>
     <string name="feedback_entry_list_title">请选择问题类型</string>
     <string name="feedback_entry_ride_road_restrict">道路限行</string>
     <string name="feedback_exists_problems">存在的问题</string>
@@ -3600,7 +3509,6 @@ h5 fastweb离线资源包</string>
     <string name="get_off_subway">下车</string>
     <string name="get_on">上车</string>
     <string name="get_on_subway">上车</string>
-    <string name="get_verifycode">获取验证码</string>
     <string name="getpicfailed">获取图像失败，请重试！</string>
     <string name="getting_address">正在获取地址详情...</string>
     <string name="getting_current_position">正在获取当前位置</string>
@@ -3608,7 +3516,6 @@ h5 fastweb离线资源包</string>
     <string name="go">出发</string>
     <string name="go_here">路线</string>
     <string name="go_home">设为家</string>
-    <string name="go_to_set">去设置</string>
     <string name="google_credential_unsupported">很抱歉，您的设备可能不支持google登录，请切换其他登录方式。</string>
     <string name="goto_download">去下载</string>
     <string name="grand_son_title">查看此点详细信息</string>
@@ -3760,7 +3667,6 @@ h5 fastweb离线资源包</string>
     <string name="has_error">有误</string>
     <string name="has_no_location">尚未定位成功</string>
     <string name="has_real_time">查看巴士车实时位置</string>
-    <string name="has_same_useful_point">常用地址已存在</string>
     <string name="has_selected">已选</string>
     <string name="has_wrong">出错了</string>
     <string name="have_pic_tip">WLAN下提供图片模式</string>
@@ -3814,7 +3720,6 @@ h5 fastweb离线资源包</string>
     <string name="hint_correct_address">请输入正确的地址</string>
     <string name="hint_correct_name">请输入正确的名称</string>
     <string name="hint_correct_tel">请输入正确的电话</string>
-    <string name="hint_waiting">请稍候…</string>
     <string name="history">历史记录</string>
     <string name="history_city">历史城市</string>
     <string name="history_has_del">操作成功！</string>
@@ -3847,12 +3752,11 @@ h5 fastweb离线资源包</string>
     <string name="ic_countrywide">全国</string>
     <string name="ic_delete_cache">正在删除本地缓存...</string>
     <string name="ic_indent">订单</string>
-    <string name="ic_loc_fail">定位失败,当前网络信号较差,请到空旷场地后重试.</string>
+    <string name="ic_loc_fail_new">获取当前位置失败，请稍后重试</string>
     <string name="ic_loc_wait_position">正在获取位置...</string>
     <string name="ic_login_fail">登录失败，请重新登录</string>
     <string name="ic_lottery">彩票</string>
     <string name="ic_net_error">错误提示</string>
-    <string name="ic_net_error_check">当前网络不可用，请检查网络连接</string>
     <string name="ic_net_error_indoor_noresult">室内未查找到结果</string>
     <string name="ic_net_error_noresult">未查找到结果</string>
     <string name="ic_net_error_noresult_real_time_bus">未查询到结果!更多实时巴士正在陆续添加中!</string>
@@ -3954,12 +3858,8 @@ h5 fastweb离线资源包</string>
     <string name="input_car_plate">输入车牌</string>
     <string name="input_completed_car_plate">请输入完整车牌号</string>
     <string name="input_name">输入名称</string>
-    <string name="input_phone">请输入手机号</string>
     <string name="input_phone_num">手机号输入</string>
-    <string name="input_tag_name">输入标签名称</string>
     <string name="input_taxi_cost">请输入打车金额</string>
-    <string name="input_useful_alias_hint">输入家、公司、学校等</string>
-    <string name="input_verifycode">添加验证码</string>
     <string name="inputsafe">警告,请注意输入安全</string>
     <string name="insist_search_in_this_city">仍然在%1$s搜：</string>
     <string name="instructions">帮助</string>
@@ -4014,7 +3914,6 @@ h5 fastweb离线资源包</string>
     <string name="ji_xu_dian_ji_di_tu">继续点击地图</string>
     <string name="join_user_experience_plan">参与用户体验改善计划</string>
     <string name="jump_page_error">出现了些小问题,请稍后再试</string>
-    <string name="just_refresh">刚刚刷新</string>
     <string name="keep_click_map">继续点击地图</string>
     <string name="keep_screen_light">保持屏幕常亮</string>
     <string name="keyboard_123">切换到数位和符号输入</string>
@@ -4065,7 +3964,6 @@ h5 fastweb离线资源包</string>
     <string name="laboratory_description">抢先体验新功能</string>
     <string name="large_china_scale_text">全国概要图</string>
     <string name="last_page">上翻</string>
-    <string name="last_refresh">上次刷新:</string>
     <string name="later_set_text">暂不设置</string>
     <string name="layer_bus">巴士雷达</string>
     <string name="layer_commuting">上下班助手</string>
@@ -4077,7 +3975,6 @@ h5 fastweb离线资源包</string>
     <string name="leave">离开</string>
     <string name="level">等级</string>
     <string name="lide_space">立得空间 http://www.leador.com.cn</string>
-    <string name="life_base_nosearch_result">未搜索到结果</string>
     <string name="life_cancel">取消</string>
     <string name="life_common_dlg_open_setting_failed">打开设置失败</string>
     <string name="life_common_net_error">请检查网络后重试</string>
@@ -4091,39 +3988,16 @@ h5 fastweb离线资源包</string>
     <string name="life_order_base_list_item_left_top">就餐时间：2014–04–22</string>
     <string name="life_order_base_list_item_name">发现新卡券</string>
     <string name="life_order_base_list_item_order_flag">预定成功</string>
-    <string name="life_order_train_city">北京南-上海虹桥</string>
-    <string name="life_order_train_detail_title">火车票订单</string>
-    <string name="life_order_train_feizhu">飞猪</string>
-    <string name="life_order_train_loading">正在搜索火车票</string>
-    <string name="life_order_train_seat_0">站票</string>
-    <string name="life_order_train_seat_1">硬座</string>
-    <string name="life_order_train_seat_10">二等座</string>
-    <string name="life_order_train_seat_11">特等座</string>
-    <string name="life_order_train_seat_12">观光座</string>
-    <string name="life_order_train_seat_13">特等软座</string>
-    <string name="life_order_train_seat_14">一人软包</string>
-    <string name="life_order_train_seat_2">软座</string>
-    <string name="life_order_train_seat_3">硬卧</string>
-    <string name="life_order_train_seat_4">软卧</string>
-    <string name="life_order_train_seat_5">高级软卧</string>
-    <string name="life_order_train_seat_6">一等软座</string>
-    <string name="life_order_train_seat_7">二等软座</string>
-    <string name="life_order_train_seat_8">商务座</string>
-    <string name="life_order_train_seat_9">一等座</string>
-    <string name="life_order_train_start">开车</string>
     <string name="life_order_train_status_0">查询中</string>
     <string name="life_order_train_status_1">待支付</string>
     <string name="life_order_train_status_1_">支付失败</string>
     <string name="life_order_train_status_2">出票中</string>
-    <string name="life_order_train_status_3">出票成功</string>
     <string name="life_order_train_status_4">正在预订</string>
     <string name="life_order_train_status_5">取消</string>
     <string name="life_order_train_status_6">出票中</string>
     <string name="life_order_train_status_7">待支付</string>
     <string name="life_order_train_status_8">待退差价</string>
     <string name="life_order_train_third_party">第三方网站</string>
-    <string name="life_order_train_ticket_num">%s张</string>
-    <string name="life_order_train_unkown">未知</string>
     <string name="life_order_train_yilong">艺龙</string>
     <string name="life_select_city">选择城市地区</string>
     <string name="light_figure">显示光柱图</string>
@@ -4148,7 +4022,6 @@ h5 fastweb离线资源包</string>
     <string name="live_search_result_search">搜索</string>
     <string name="load_error">加载失败</string>
     <string name="loading">正在加载…</string>
-    <string name="loadingMessage">正在搜索</string>
     <string name="loading_a">加载中...</string>
     <string name="loadingview_loadingText">加载中</string>
     <string name="local_dir">当前存储目录：</string>
@@ -4175,7 +4048,7 @@ h5 fastweb离线资源包</string>
     <string name="location_content_lbs_weak">当前未开启{multi_app_name_hk}地理位置权限，可能会影响使用当前小程序内相关服务</string>
     <string name="location_decl_gaode">高德地图</string>
     <string name="location_decl_gaode_ltd">高德软件有限公司</string>
-    <string name="location_detail">在%s附近</string>
+    <string name="location_detail">在&lt;xliff:g id=location&gt;%s&lt;/xliff:g&gt;附近</string>
     <string name="location_fail">定位失败，请重试</string>
     <string name="location_failed">定位精度过低，请稍后再试!</string>
     <string name="location_float_first_guide_action_text">去开启</string>
@@ -4227,8 +4100,6 @@ h5 fastweb离线资源包</string>
     <string name="log_out">退出登录</string>
     <string name="log_setting_title">用户体验改善计划</string>
     <string name="log_test_mode">埋点测试开关</string>
-    <string name="login_again">请重新登录</string>
-    <string name="login_alert">请您登录后查看订单</string>
     <string name="login_expired">登录已过期</string>
     <string name="login_first">您需要先登录才能查看反馈信息</string>
     <string name="login_for_sync">登录即可同步收藏信息</string>
@@ -4528,6 +4399,7 @@ h5 fastweb离线资源包</string>
     <string name="navi_motorbike_declare_02">· 请您不要在驾驶同时操作本软件，并务必在确保安全的前提下使用本软件，以防发生交通事故或其他危险情况。</string>
     <string name="navi_motorbike_declare_03">· 我们著重提示：避开限行、路线规划及导航等功能和服务仅供您参考，请不要以此作为您行驶或出行的唯一依据。请您以实际的交通和路况为准，并严格遵守法律法规。</string>
     <string name="navi_motorbike_declare_04">· 本服务为在线服务，您的网络状况可能会对我们的服务产生影响。当您使用本服务时会产生网络流量费用，该费用由您的电信服务商收取。</string>
+    <string name="navi_notification_title">高德导航中</string>
     <string name="navi_preference_complete">完成</string>
     <string name="navi_repair">维修站</string>
     <string name="navi_report_failed_leak_gps">未获取手机定位信息，上报失败</string>
@@ -4841,8 +4713,6 @@ h5 fastweb离线资源包</string>
     <string name="offline_message_tbt_need_reboot">离线导航引擎已经下载完成，需要重启后才可生效，若不重启不能使用离线导航功能。</string>
     <string name="offline_message_tbt_no_data">网络不畅，且无离线导航数据，请检查网络后重试。</string>
     <string name="offline_message_tbt_no_result">网络不畅，且无沿途离线数据包，无法规划路线，请检查网络后重试。</string>
-    <string name="offline_message_tbt_success">网络不畅，已自动转为离线路线规划</string>
-    <string name="offline_message_tbt_success_first">您选择了离线优先，已优先为您规划离线路线</string>
     <string name="offline_navi_tip">离线导航使用提示</string>
     <string name="offline_navi_tts_down_cancle">取消下载</string>
     <string name="offline_navi_tts_down_continue">继续下载</string>
@@ -4998,11 +4868,9 @@ h5 fastweb离线资源包</string>
     <string name="open_torch">轻点照亮</string>
     <string name="open_wx_message">微信号「gaodeditu」已复制到剪切板。您可以到微信中关注我们，是否打开微信？</string>
     <string name="open_wx_title">打开微信？</string>
-    <string name="oper_by_way_of">途经:</string>
     <string name="oper_check_network_err">网络异常，请检查网络后重试</string>
     <string name="oper_click_err_item">点击存在错误的项目即可修改</string>
     <string name="oper_click_feedback">点击查看您已反馈信息的详情</string>
-    <string name="oper_click_look">点击查看</string>
     <string name="oper_commit_content_err">提交内容有误</string>
     <string name="oper_company">公司</string>
     <string name="oper_err_location">您遇到的情况</string>
@@ -5018,9 +4886,6 @@ h5 fastweb离线资源包</string>
     <string name="oper_loading_2">正在加载，请稍候…</string>
     <string name="oper_location_err">定位失败，请重试</string>
     <string name="oper_location_fail">定位失败，请稍后再试</string>
-    <string name="oper_minute">分钟</string>
-    <string name="oper_need_location">获取有效位置后才能发表</string>
-    <string name="oper_no_phone_err">请输入正确电话号码，方便警察联系您</string>
     <string name="oper_o_time">现在运营时间是</string>
     <string name="oper_open_question">存在的问题</string>
     <string name="oper_push_to_talk">按住说话</string>
@@ -5039,8 +4904,6 @@ h5 fastweb离线资源包</string>
     <string name="or_station_name">原站点名称</string>
     <string name="order_alert">您的货款将直接支付到第三方团购网站。
 任何售后问题将由第三方团购网站负责解决。</string>
-    <string name="order_bind_phone_or_taobao_tip">请您绑定手机号或淘宝账号后查看订单</string>
-    <string name="order_bind_phone_tip">请您绑定手机号后查看订单</string>
     <string name="order_check_err_msg_10053">您有行程中的打车订单</string>
     <string name="order_check_err_msg_10054">您有一个订单等待支付</string>
     <string name="order_check_err_msg_10062">存在进行中的行程</string>
@@ -5069,24 +4932,9 @@ h5 fastweb离线资源包</string>
     <string name="order_food_hit_location">送餐地址的地图位置</string>
     <string name="order_food_new_address_title">新增地址</string>
     <string name="order_food_save">保存</string>
-    <string name="order_go_ordering">去下单</string>
     <string name="order_groupbuy_frist_in">查找附近，寻找周边的团购，优惠券信息</string>
-    <string name="order_hotel_empty_tip">还没订过酒店哦</string>
     <string name="order_hotel_search">查询</string>
-    <string name="order_login_tip">请您登录后查看订单</string>
     <string name="order_phone_code_success">申请验证码成功，请等待短信提示</string>
-    <string name="order_status_order_cancel">订单取消</string>
-    <string name="order_status_order_close">订单关闭</string>
-    <string name="order_status_paid">已支付</string>
-    <string name="order_status_pay_out_of_time">支付超时</string>
-    <string name="order_status_processing">处理中</string>
-    <string name="order_status_querying">查询中</string>
-    <string name="order_status_refund_fail">退票失败</string>
-    <string name="order_status_ticket_print">已出票</string>
-    <string name="order_status_ticket_print_fail">出票失败</string>
-    <string name="order_status_ticket_print_out_of_time">出票超时</string>
-    <string name="order_status_ticket_refund">有退票记录</string>
-    <string name="order_status_unpaid">未付款</string>
     <string name="order_ticket_end">抵达</string>
     <string name="order_ticket_form">填写订单</string>
     <string name="order_ticket_space">舱位</string>
@@ -5102,7 +4950,6 @@ h5 fastweb离线资源包</string>
     <string name="other_issue">其他问题</string>
     <string name="other_issues">其他问题描述</string>
     <string name="other_msg4">密码</string>
-    <string name="other_navi_issue">其他导航问题</string>
     <string name="other_onfoot">其他步行段</string>
     <string name="other_usage_issue">其他使用问题</string>
     <string name="others">其他</string>
@@ -5338,7 +5185,6 @@ h5 fastweb离线资源包</string>
     <string name="privacy_permission_oaid_content">允许展示推荐个性化广告</string>
     <string name="privacy_permission_oaid_title">个性化广告推荐</string>
     <string name="privacy_setting">足迹设置</string>
-    <string name="privacy_terms">隐私权政策</string>
     <string name="privilege_center">特权中心</string>
     <string name="product_num_name">产品号</string>
     <string name="progress_message">加载中…</string>
@@ -5382,14 +5228,12 @@ h5 fastweb离线资源包</string>
     <string name="publish_xiangce">相册</string>
     <string name="pubok">发送成功！</string>
     <string name="pull_down_refresh">下拉刷新</string>
-    <string name="pull_down_to_loading_next_page">下拉加载第%1$d页</string>
     <string name="pull_loading_text">松开刷新</string>
     <string name="pull_to_refresh_from_bottom_pull_label">上拉加载更多</string>
     <string name="pull_to_refresh_page">上拉加载第%d页</string>
     <string name="pull_to_refresh_pull_label">拖动刷新……</string>
     <string name="pull_to_refresh_refreshing_label">加载中…</string>
     <string name="pull_to_refresh_release_label">松开即可加载</string>
-    <string name="pull_up_to_next_page">上拉加载第%1$d页</string>
     <string name="pulltorefresh_current_page_no_more_page">当前第%d页，没有下一页了</string>
     <string name="pulltorefresh_from_bottom_pull_label">上拉加载更多</string>
     <string name="pulltorefresh_page">上拉加载第%d页</string>
@@ -5632,10 +5476,8 @@ h5 fastweb离线资源包</string>
     <string name="rejected">已验证</string>
     <string name="release_for_second_page">松开加载第2页</string>
     <string name="release_refresh">松开即可刷新</string>
-    <string name="release_to_next_page">松开刷新第%1$d页</string>
     <string name="release_to_refresh">松开刷新第</string>
     <string name="release_to_refresh_page">松开刷新第%d页</string>
-    <string name="release_to_second_page">松开加载第2页</string>
     <string name="remain_days">还有</string>
     <string name="remark">注:</string>
     <string name="remark_prefix">表示该项目参与    「</string>
@@ -5650,7 +5492,6 @@ h5 fastweb离线资源包</string>
     <string name="rename_no_empty">重命名不能为空</string>
     <string name="rephotogragh">重拍</string>
     <string name="report_cluorse">封路</string>
-    <string name="report_error">报错</string>
     <string name="report_error_bean_broadcast_error">播报错误</string>
     <string name="report_error_bean_camera_error">电子眼错误</string>
     <string name="report_error_bean_covert_result">自驾经过的位置</string>
@@ -5669,8 +5510,6 @@ h5 fastweb离线资源包</string>
     <string name="report_success_and_verify">发表成功,正在审核</string>
     <string name="report_traffic_info">上报路况事件</string>
     <string name="reporting">发表中......</string>
-    <string name="request_failed">请求失败，请检查网络
-稍后重试</string>
     <string name="request_image_fail">图片请求失败</string>
     <string name="request_navi_line_fail">路径计算失败</string>
     <string name="request_selected_permission">同意并开启以上权限</string>
@@ -5741,7 +5580,6 @@ h5 fastweb离线资源包</string>
     <string name="ride_ele_net_fail_2">建议采用其他出行方式</string>
     <string name="ride_end_average_speed_unit">均速(km/h)</string>
     <string name="ride_finish_max_speed">最高(km/h)</string>
-    <string name="ride_finish_share_weibo_msg">骑行在路上，遇见不一样的自己@高德地图 #高德地图#</string>
     <string name="ride_finish_total_time">时长</string>
     <string name="ride_history_average_speed">平均(km/h)</string>
     <string name="ride_history_had_no_track">还没有骑行轨迹哦</string>
@@ -5819,7 +5657,6 @@ h5 fastweb离线资源包</string>
     <string name="rotue_car_scene_tip">是否要去</string>
     <string name="route">路线</string>
     <string name="route_about">约</string>
-    <string name="route_add_success">添加成功</string>
     <string name="route_add_via_description">添加途经点</string>
     <string name="route_after">后</string>
     <string name="route_all_length">全程</string>
@@ -5831,7 +5668,6 @@ h5 fastweb离线资源包</string>
     <string name="route_arriving_station">即将到站</string>
     <string name="route_bike_navi_exit_msg">确认退出导航？</string>
     <string name="route_bike_navi_gps_weak_warning">当前GPS信号弱，位置更新可能延迟</string>
-    <string name="route_bind_phone">绑定</string>
     <string name="route_bus">巴士</string>
     <string name="route_bus_browser_visit_indoor_error">访问室内数据失败！</string>
     <string name="route_bus_customtime">自定义时间</string>
@@ -6298,7 +6134,6 @@ h5 fastweb离线资源包</string>
     <string name="saturday">周六</string>
     <string name="save">完成</string>
     <string name="save_app_update_toast">当前版本不能更好的支持您使用收藏夹，请更新后使用, 请在更多--设置页面，点击检查更新</string>
-    <string name="save_current_edit">是否保存本次编辑</string>
     <string name="save_fail">收藏失败</string>
     <string name="save_image_failed">图片保存失败</string>
     <string name="save_image_to">图片已保存至 %s</string>
@@ -6306,22 +6141,11 @@ h5 fastweb离线资源包</string>
     <string name="save_is_empty_msg">您的收藏夹还没有任何信息</string>
     <string name="save_power_content">省流量70%省电40%</string>
     <string name="save_power_mode">HUD模式</string>
-    <string name="save_search_add">加入收藏</string>
-    <string name="save_search_fragment_my_location">我的位置</string>
-    <string name="save_search_hint">搜索</string>
-    <string name="save_search_keyword_error_info">搜索纠错的文字</string>
-    <string name="save_search_no_mylocation">未定位成功…</string>
-    <string name="save_search_real_scene_position">请输入位置名称</string>
-    <string name="save_set_company">设为公司地址</string>
     <string name="save_set_company_position">点击设置公司地址</string>
-    <string name="save_set_home">设为家庭住址</string>
     <string name="save_set_home_positon">点击设置家庭住址</string>
     <string name="save_succ">保存成功</string>
     <string name="save_success">保存成功</string>
-    <string name="save_time_suggest_prefix">建议</string>
-    <string name="save_time_suggest_suffix">分钟后出发，少在路上堵</string>
     <string name="save_to_phone">保存到手机</string>
-    <string name="save_total_tag">全部标签:</string>
     <string name="save_voice">保存音频</string>
     <string name="save_work">操作</string>
     <string name="scale_auto_change">比例尺智能缩放</string>
@@ -6374,7 +6198,6 @@ h5 fastweb离线资源包</string>
     <string name="search_back">返回</string>
     <string name="search_back_to_home">一键返回主图</string>
     <string name="search_billboard_no_info">暂无指南信息</string>
-    <string name="search_btn_text">搜索</string>
     <string name="search_button">搜索button</string>
     <string name="search_child_poi_label">仅行人</string>
     <string name="search_child_poi_name">A出口</string>
@@ -6395,7 +6218,6 @@ h5 fastweb离线资源包</string>
     <string name="search_locating">定位中</string>
     <string name="search_location_type_name">搜索其他</string>
     <string name="search_nearby">在我的附近搜索</string>
-    <string name="search_no">车次查询</string>
     <string name="search_no_history_tip_around">“该点”周边</string>
     <string name="search_no_history_tip_bus">巴士及地铁线路、站点</string>
     <string name="search_no_history_tip_bus_line">巴士线路</string>
@@ -6418,8 +6240,6 @@ h5 fastweb离线资源包</string>
     <string name="search_poi_tip_text_2001">首开广场</string>
     <string name="search_search">搜索</string>
     <string name="search_search_result_page_header">搜索</string>
-    <string name="search_searching">正在搜索</string>
-    <string name="search_station">站站查询</string>
     <string name="search_sugg_more">查看更多搜索结果</string>
     <string name="search_tab_bar_index">首页</string>
     <string name="search_toast_location_fail">定位失败，请重试</string>
@@ -6428,7 +6248,6 @@ h5 fastweb离线资源包</string>
     <string name="search_toast_no_related_result">未找到相关结果</string>
     <string name="search_toast_no_result_in_screen">屏幕区域无结果</string>
     <string name="search_toast_wrong_param">参数错误</string>
-    <string name="search_widget_desc_compass">指南针</string>
     <string name="search_widget_desc_layer">图层入口</string>
     <string name="search_widget_desc_message">讯息中心</string>
     <string name="search_widget_text_feedback">反馈</string>
@@ -6481,13 +6300,10 @@ h5 fastweb离线资源包</string>
     <string name="server_exception">服务器开小差了</string>
     <string name="service_tel_name">客服电话</string>
     <string name="service_tel_value">400 810 0080(24小时)</string>
-    <string name="service_terms">服务条款</string>
     <string name="set_as_end">设为终点</string>
     <string name="set_as_start">设为起点</string>
     <string name="set_as_turn_point">设途经点</string>
-    <string name="set_tag">设置标签</string>
     <string name="set_to_the_way">设为途经点</string>
-    <string name="set_useful_address">设置为常用地址</string>
     <string name="sett">设置</string>
     <string name="setting">推送设置</string>
     <string name="setting_title_collect_info">已收集个人信息清单</string>
@@ -6589,7 +6405,6 @@ h5 fastweb离线资源包</string>
     <string name="sharebike_authorization_content_4">及第三方《用户协议》</string>
     <string name="sharebike_authorization_content_title">确认向其提供以下权限即可继续操作</string>
     <string name="sharebike_barcode_decoding">正在处理</string>
-    <string name="sharebike_camera_init_fail">请开启摄像头权限后重试</string>
     <string name="sharebike_close_lock_tip_msg">关锁后1分钟内结束计费</string>
     <string name="sharebike_close_torch">关闭手电筒</string>
     <string name="sharebike_edit_address">输入目的地</string>
@@ -6861,7 +6676,6 @@ h5 fastweb离线资源包</string>
     <string name="subscribe_widget_label_1">低价提醒</string>
     <string name="subscribe_widget_title">我的低价提醒</string>
     <string name="subway">地铁</string>
-    <string name="subway_area">地铁</string>
     <string name="subway_city_switch">切换城市</string>
     <string name="subway_detail_bottom_tv">地址</string>
     <string name="subway_detail_top_tv">名称</string>
@@ -6903,7 +6717,6 @@ h5 fastweb离线资源包</string>
     <string name="sure">确定</string>
     <string name="sure_830">立即下载</string>
     <string name="sure_alicar">是</string>
-    <string name="sure_to_delelte">确认删除？</string>
     <string name="sure_to_pay">确认支付</string>
     <string name="suspend_etd_item">未来用时</string>
     <string name="suspend_traffic_item">路况</string>
@@ -6914,7 +6727,7 @@ h5 fastweb离线资源包</string>
     <string name="switch_frequent_location_tips">关闭后，将隐藏首页的常去地点入口</string>
     <string name="switch_mainmap_tip">主图样式切换成功</string>
     <string name="switch_sd">切卡</string>
-    <string name="switch_sd_card_4_4_msg">检测到当前为Android4.4以上版本，通过设置-应用程序清除数据时，则外置卡存储的地图数据会被同时删除。确认将存储位置调整到外置卡吗？</string>
+    <string name="switch_sd_card_4_4_msg"> 检测到当前为Android4.4以上版本，通过设置-应用程序清除数据时，则外置卡存储的地图数据会被同时删除。确认将存储位置调整到外置卡吗？ </string>
     <string name="switch_sdcard_only_one">没有其他存储空间，请检查后重试</string>
     <string name="switch_text">切换</string>
     <string name="switch_to">已切换至</string>
@@ -7301,10 +7114,14 @@ h5 fastweb离线资源包</string>
     <string name="tiny_remote_debug_hit_break_point">命中断点...</string>
     <string name="tiny_remote_debug_no_network">网络不可用...</string>
     <string name="tiny_request_bluetooth_permission">使用你的蓝牙</string>
+    <string name="tiny_request_calendar_permission">获取您的日历创建权限</string>
     <string name="tiny_request_camera_permission">使用你的摄像头</string>
+    <string name="tiny_request_carrier_permission">获取您的运营商信息</string>
     <string name="tiny_request_confirm">允许</string>
     <string name="tiny_request_contact_permission">获取你的通讯录信息</string>
     <string name="tiny_request_deny">拒绝</string>
+    <string name="tiny_request_file_permission">获取您的文件读取权限</string>
+    <string name="tiny_request_healthdata_permission">获取你的健康数据</string>
     <string name="tiny_request_location_permission">获取你的位置信息</string>
     <string name="tiny_request_permission_repeat">总是保持以上选择，不再询问</string>
     <string name="tiny_request_permission_title">&lt;b&gt;%1$s&lt;/b&gt; 申请</string>
@@ -7450,17 +7267,6 @@ h5 fastweb离线资源包</string>
     <string name="traffic_alarm_failed">报警失败</string>
     <string name="traffic_alert">路况提醒</string>
     <string name="traffic_avoid_solution">有躲避拥堵方案，可为您节约</string>
-    <string name="traffic_board_congestion">拥堵： </string>
-    <string name="traffic_board_congestion_ranking">拥堵排行</string>
-    <string name="traffic_board_congestion_result">伙伴们，城市道路拥堵排行榜出来喽</string>
-    <string name="traffic_board_jam">拥堵</string>
-    <string name="traffic_board_kilometres">公里</string>
-    <string name="traffic_board_network_err">网络错误</string>
-    <string name="traffic_board_slow">缓行</string>
-    <string name="traffic_board_speed">时速： </string>
-    <string name="traffic_board_speed_unit">公里/小时</string>
-    <string name="traffic_board_title">拥堵排行榜</string>
-    <string name="traffic_board_unblocked">畅通</string>
     <string name="traffic_broadcast">路况播报</string>
     <string name="traffic_btn_accident">事故</string>
     <string name="traffic_btn_control_des">管制</string>
@@ -7519,12 +7325,8 @@ h5 fastweb离线资源包</string>
     <string name="traffic_report">上报</string>
     <string name="traffic_report_accident">事故</string>
     <string name="traffic_report_alarm">交通事故报警</string>
-    <string name="traffic_report_alarm_err">报警失败，请稍后重试!</string>
     <string name="traffic_report_alarm_link_122">&lt;u&gt;122事故报警&lt;/u&gt;</string>
     <string name="traffic_report_alarm_now">立刻报警</string>
-    <string name="traffic_report_alarm_phone_err">为方便交警联系，请您正确填写手机号</string>
-    <string name="traffic_report_alarm_title_122">122事故报警</string>
-    <string name="traffic_report_alarm_unsupport_err">定位不在报警受理范围，请拨打122报警!</string>
     <string name="traffic_report_alarm_upload_pic">照片上传</string>
     <string name="traffic_report_app_err">我要反馈</string>
     <string name="traffic_report_app_err_keyword">软件使用问题</string>
@@ -7548,7 +7350,6 @@ h5 fastweb离线资源包</string>
     <string name="traffic_report_failure">上传失败，请重新上报</string>
     <string name="traffic_report_feedback_keyword">我要反馈</string>
     <string name="traffic_report_from">来自</string>
-    <string name="traffic_report_hint_tel_number">填写您的手机号，便于交警联系</string>
     <string name="traffic_report_injured">有人受伤</string>
     <string name="traffic_report_label_101001">单车事故</string>
     <string name="traffic_report_label_101002">多车事故</string>
@@ -7573,7 +7374,6 @@ h5 fastweb离线资源包</string>
     <string name="traffic_report_police">警察</string>
     <string name="traffic_report_ponding">积水</string>
     <string name="traffic_report_process">施工</string>
-    <string name="traffic_report_processing">正在处理</string>
     <string name="traffic_report_right_now">立刻上报</string>
     <string name="traffic_report_right_now2">完成</string>
     <string name="traffic_report_select_poi">请选择位置</string>
@@ -7586,10 +7386,7 @@ h5 fastweb离线资源包</string>
     <string name="traffic_report_title_address">地址</string>
     <string name="traffic_report_title_desc">详情</string>
     <string name="traffic_report_title_driveway">选择车道</string>
-    <string name="traffic_report_title_hurt">补充详情</string>
-    <string name="traffic_report_title_hurt_desc">有人受伤</string>
     <string name="traffic_report_title_img">拍照上传</string>
-    <string name="traffic_report_title_tel_number">手机号</string>
     <string name="traffic_report_trouble">故障</string>
     <string name="traffic_report_update">上报更新</string>
     <string name="traffic_restriction">限行</string>
@@ -7601,10 +7398,6 @@ h5 fastweb离线资源包</string>
     <string name="traffic_size">这里有%s条路况事件。</string>
     <string name="traffic_slow">缓慢</string>
     <string name="traffic_still">不动</string>
-    <string name="traffic_top_list_description">从六里桥到三元桥</string>
-    <string name="traffic_top_list_jam">需要55分钟</string>
-    <string name="traffic_top_list_speed">时速: 45公里/小时</string>
-    <string name="traffic_top_list_tv1">上海绕城高速</string>
     <string name="traffic_unblocked">畅通</string>
     <string name="traffic_weather_11080">大风</string>
     <string name="traffic_weather_11081">风暴</string>
@@ -7622,8 +7415,6 @@ h5 fastweb离线资源包</string>
     <string name="traffic_weather_11093">沙尘暴</string>
     <string name="traffic_weather_11094">雷电</string>
     <string name="train_arrive_time">抵达时间</string>
-    <string name="train_buy_ticket_btn">购票</string>
-    <string name="train_buy_ticket_tv">已售罄</string>
     <string name="train_cancel">取消</string>
     <string name="train_cate_check">车型选择</string>
     <string name="train_change_search_keywords_or_date">请更改筛选条件或查看其它日期</string>
@@ -7633,16 +7424,11 @@ h5 fastweb离线资源包</string>
     <string name="train_cost_least_time">历时最短</string>
     <string name="train_default_text">轻松购票 快捷支付</string>
     <string name="train_depart_time">出发时间</string>
-    <string name="train_departure_station_type_tv_arrive">到</string>
-    <string name="train_departure_station_type_tv_start">开</string>
     <string name="train_drawer">列车查询</string>
-    <string name="train_end_hint">抵达城市或站点</string>
     <string name="train_first_last_time">首末车时间</string>
     <string name="train_info_basic">基础信息</string>
-    <string name="train_info_end">终</string>
     <string name="train_info_end_point">终点</string>
     <string name="train_info_end_point_tv">抵达</string>
-    <string name="train_info_end_station">终点站</string>
     <string name="train_info_interchange_stations_info">途经站信息</string>
     <string name="train_info_item_station_arrive">到站:</string>
     <string name="train_info_item_station_leave">出站:</string>
@@ -7653,11 +7439,8 @@ h5 fastweb离线资源包</string>
     <string name="train_info_item_station_price4">下铺:456元</string>
     <string name="train_info_itinerary">1235公里</string>
     <string name="train_info_listview_header_tv1">行程:</string>
-    <string name="train_info_minite">分钟</string>
-    <string name="train_info_start">始</string>
     <string name="train_info_start_point">北京西站</string>
     <string name="train_info_start_point_tv">始发</string>
-    <string name="train_info_start_station">始发站</string>
     <string name="train_info_ticket_info">票价信息</string>
     <string name="train_info_ticket_price">235元</string>
     <string name="train_info_ticket_price2">456元</string>
@@ -7669,7 +7452,6 @@ h5 fastweb离线资源包</string>
     <string name="train_info_type">动车组</string>
     <string name="train_input_arrival_station">请输入抵达城市</string>
     <string name="train_input_departure_station">请输入出发城市</string>
-    <string name="train_no_hint">请输入完整车次，例：T41</string>
     <string name="train_no_limit">不限</string>
     <string name="train_not_found_tips">亲，没有找到符合条件的车次</string>
     <string name="train_plan_buy_ticket_bind_phone">为了保障账号安全，建议您绑定手机号</string>
@@ -7702,13 +7484,8 @@ h5 fastweb离线资源包</string>
     <string name="train_search_list_item_ywx">下铺:456元</string>
     <string name="train_search_list_item_ywz">中铺:456元</string>
     <string name="train_search_list_item_yz">硬座:456元</string>
-    <string name="train_shortest_time_logo">耗时最短</string>
-    <string name="train_start_hint">出发城市或站点</string>
     <string name="train_starting_interval">发车间隔</string>
-    <string name="train_ticket_beyond">起</string>
     <string name="train_ticket_record">购票记录</string>
-    <string name="train_ticket_unit">张</string>
-    <string name="train_time">列车时刻</string>
     <string name="train_type_d">动车(D)</string>
     <string name="train_type_gc">高铁(G/C)</string>
     <string name="train_type_ly">其他(L/Y等)</string>
@@ -7787,53 +7564,6 @@ h5 fastweb离线资源包</string>
 避开限行区域</string>
     <string name="try_again_once">再试一次</string>
     <string name="try_to_search_others">搜索其他路线试试~</string>
-    <string name="tt_cannot_find_results">未找到相关结果，请稍后重试!</string>
-    <string name="tt_departure_destination_same">出发站和目的站相同,请重新输入</string>
-    <string name="tt_disclaimer_agreement_caption">火车票订购服务由艺龙网提供，您使用该服务即视为同意《艺龙网代购服务协议》</string>
-    <string name="tt_disclaimer_hot_line_caption">您在使用火车票订购服务过程中有任何疑问，请咨询艺龙客服：4009-333-333</string>
-    <string name="tt_empty_departure">出发城市或站点不能为空</string>
-    <string name="tt_empty_destination">抵达城市或站点不能为空</string>
-    <string name="tt_empty_train_name">车次名称不能为空</string>
-    <string name="tt_seat_type_D_train_couch">动车卧铺</string>
-    <string name="tt_seat_type_business_seat">商务座</string>
-    <string name="tt_seat_type_common_seat_level_1">一等座</string>
-    <string name="tt_seat_type_common_seat_level_2">二等座</string>
-    <string name="tt_seat_type_for_one_person_only">一人软包</string>
-    <string name="tt_seat_type_hard_couch_down">硬卧(下)</string>
-    <string name="tt_seat_type_hard_couch_middle">硬卧(中)</string>
-    <string name="tt_seat_type_hard_couch_up">硬卧(上)</string>
-    <string name="tt_seat_type_hard_seat">硬座</string>
-    <string name="tt_seat_type_soft_couch">软卧</string>
-    <string name="tt_seat_type_soft_couch_down">软卧(下)</string>
-    <string name="tt_seat_type_soft_couch_up">软卧(上)</string>
-    <string name="tt_seat_type_soft_seat">软座</string>
-    <string name="tt_seat_type_soft_seat_level_1">一等软座</string>
-    <string name="tt_seat_type_soft_seat_level_2">二等软座</string>
-    <string name="tt_seat_type_special_seat">特等座</string>
-    <string name="tt_seat_type_special_soft_seat">特等软座</string>
-    <string name="tt_seat_type_super_soft_couch_down">高级软卧（下）</string>
-    <string name="tt_seat_type_super_soft_couch_up">高级软卧（上）</string>
-    <string name="tt_seat_type_tourism_seat">观光座</string>
-    <string name="tt_ticket_list_all_types">所有车型</string>
-    <string name="tt_ticket_list_default_today">今天</string>
-    <string name="tt_ticket_list_purchase_date">MM月dd日 E</string>
-    <string name="tt_train_arrive">抵达</string>
-    <string name="tt_train_end_station">上海虹桥</string>
-    <string name="tt_train_new_type_all_types">所有车型</string>
-    <string name="tt_train_new_type_city_train">C-城际</string>
-    <string name="tt_train_new_type_direct_train">Z-直达</string>
-    <string name="tt_train_new_type_fast_train">K-快速</string>
-    <string name="tt_train_new_type_harmony_train">D-动车</string>
-    <string name="tt_train_new_type_high_speed_harmony_train">G-高铁</string>
-    <string name="tt_train_new_type_other_trains">其他</string>
-    <string name="tt_train_new_type_special_fast_train">T-特快</string>
-    <string name="tt_train_running_time">6时30分</string>
-    <string name="tt_train_search">列车查询</string>
-    <string name="tt_train_start">发车</string>
-    <string name="tt_train_start_date">5-29 周五</string>
-    <string name="tt_train_start_station">北京南</string>
-    <string name="tt_train_station">站名</string>
-    <string name="tt_train_stay">停留</string>
     <string name="tt_train_type_air_common">空调普客</string>
     <string name="tt_train_type_air_common_fast">空调普快</string>
     <string name="tt_train_type_air_fast">空调快速</string>
@@ -7943,14 +7673,12 @@ h5 fastweb离线资源包</string>
     <string name="useful_addr_set">点击设置</string>
     <string name="useful_addr_using_express">高速优先</string>
     <string name="useful_address_add_address">添加常用地址</string>
-    <string name="useful_address_alias_could_not_be_null">常用地址暱称不能为空！</string>
     <string name="useful_address_delete">您确定要删除此地址？</string>
     <string name="useful_address_hint_title">删除这个地址</string>
     <string name="useful_address_name_exist">常用地址名字已经存在</string>
     <string name="useful_address_not_set">请先设置%1$s的地址</string>
     <string name="useful_address_save_hint">请修改后再保存</string>
     <string name="useful_address_title">常用地址</string>
-    <string name="useful_alias">常用暱称</string>
     <string name="useful_point">常用地点</string>
     <string name="user_agree_title">服务条款与改善计划</string>
     <string name="user_experience_imporvement_plan">用户体验改善计划</string>
@@ -8034,7 +7762,6 @@ h5 fastweb离线资源包</string>
     <string name="v4_zoom_tip_province">省</string>
     <string name="v4_zoom_tip_street">街道</string>
     <string name="vaild_voucher">有效卡券</string>
-    <string name="verify_error">验证码错误</string>
     <string name="verifycode_expired_error">验证码过期</string>
     <string name="versify_enter">验证码</string>
     <string name="via_station">途经站点</string>
@@ -8086,7 +7813,6 @@ h5 fastweb离线资源包</string>
     <string name="voice_introduce_title_search">查地点</string>
     <string name="voice_introduce_title_traffic">看路况</string>
     <string name="voice_kilometer">公里</string>
-    <string name="voice_loading">正在搜索 …</string>
     <string name="voice_locate_error">对不起，无法获取您的位置，请检查后重试。</string>
     <string name="voice_log_bus_navi">巴士提醒</string>
     <string name="voice_log_dest_navi">骑行导航</string>
@@ -8233,7 +7959,7 @@ h5 fastweb离线资源包</string>
     <string name="wallet_withdraw">提现</string>
     <string name="wallet_withdraw_request">请求提现</string>
     <string name="wallet_withdraw_success">提现成功</string>
-    <string name="wallet_withdraw_success_detail">提现金额将于<font color="#f6712a">2周内</font>到账</string>
+    <string name="wallet_withdraw_success_detail">提现金额将于&lt;font color=#f6712a&gt;2周内&lt;/font&gt;到账</string>
     <string name="warn_data_space_low">高德地图暂时无法启动，请卸载不常用的软件后重试。</string>
     <string name="warn_plugin_install_error">您的存储空间不足，安装后部分功能将不能正常使用，建议卸载不常用的软件后重新安装。</string>
     <string name="warning_830">注意</string>
@@ -8290,10 +8016,8 @@ h5 fastweb离线资源包</string>
     <string name="weibo">新浪微博</string>
     <string name="weibo_authorize_success">微博授权成功，请创建高德账号</string>
     <string name="weibo_pub">发布</string>
-    <string name="weibo_register">登录</string>
     <string name="weibo_share_topic">#高德地图#</string>
     <string name="welcome_privacy_policy">欢迎使用高德地图</string>
-    <string name="welocome_to_use_amap">欢迎使用高德地图</string>
     <string name="west">正西</string>
     <string name="west_gate">西门</string>
     <string name="whatrudoing">你要干嘛</string>
